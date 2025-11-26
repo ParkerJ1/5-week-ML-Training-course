@@ -56,6 +56,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 import time
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+print(f"Using device: {device}")
+
 print("="*70)
 print("EXERCISE 1: LENET-5 IMPLEMENTATION")
 print("="*70)
@@ -116,7 +119,7 @@ class LeNet5(nn.Module):
         return x
 
 # Create model
-lenet = LeNet5()
+lenet = LeNet5().to(device)
 print("\nLeNet-5 Architecture:")
 print(lenet)
 
@@ -230,10 +233,10 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 lenet_accuracy = correct / total
-print(f"\n🎯 LeNet-5 Test Accuracy: {lenet_accuracy:.4f}")
+print(f"\nLeNet-5 Test Accuracy: {lenet_accuracy:.4f}")
 print(f"Training time: {training_time:.1f} seconds")
 
-print("\n✓ LeNet-5 implementation complete")
+print("\nLeNet-5 implementation complete")
 ```
 
 #### Exercise 2: Implement AlexNet (Simplified) (60 min)
@@ -307,7 +310,7 @@ class AlexNet(nn.Module):
         return x
 
 # Create model
-alexnet = AlexNet(num_classes=10)
+alexnet = AlexNet(num_classes=10).to(device)
 print("\nAlexNet Architecture:")
 print(alexnet)
 
@@ -372,10 +375,10 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 alexnet_accuracy = correct / total
-print(f"\n🎯 AlexNet Test Accuracy: {alexnet_accuracy:.4f}")
+print(f"\nAlexNet Test Accuracy: {alexnet_accuracy:.4f}")
 print(f"Training time: {alexnet_time:.1f} seconds")
 
-print("\n✓ AlexNet implementation complete")
+print("\nAlexNet implementation complete")
 ```
 
 ---
@@ -396,7 +399,7 @@ print("="*70)
 # Load Day 11's SimpleCNN for comparison
 from Week3_Day11 import SimpleCNN  # Assuming it's available
 
-simplecnn = SimpleCNN()
+simplecnn = SimpleCNN().to(device)
 simplecnn_params = sum(p.numel() for p in simplecnn.parameters())
 
 # Create comparison table
@@ -496,13 +499,13 @@ ax.set_title('AlexNet Architecture (Simplified)', fontsize=14, fontweight='bold'
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key Observations:")
+print("\nKey Observations:")
 print("- LeNet (1998): Small, efficient, tanh activation")
 print("- AlexNet (2012): Deeper, ReLU, dropout, more parameters")
 print("- Both work well on MNIST (too easy for modern CNNs)")
 print("- Real power shows on complex datasets (ImageNet)")
 
-print("\n✓ Comparison complete")
+print("\nComparison complete")
 ```
 
 #### Exercise 4: Historical Context Analysis (40 min)
@@ -610,14 +613,14 @@ plt.grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Why AlexNet Was Revolutionary:")
+print("\nWhy AlexNet Was Revolutionary:")
 print("- First deep learning win in ImageNet competition")
 print("- Error rate: 25.8% → 16.4% (37% reduction!)")
 print("- Proved deep learning > traditional computer vision")
 print("- Sparked the deep learning boom")
 print("- Made GPUs essential for AI research")
 
-print("\n✓ Historical context understood")
+print("\nHistorical context understood")
 ```
 
 #### Exercise 5: Feature Visualization Comparison (50 min)
@@ -725,13 +728,13 @@ plt.suptitle(f'AlexNet Conv1 Feature Maps (first 16 of 64, Label: {labels[0].ite
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Observations:")
+print("\nObservations:")
 print("- LeNet: 6 filters, captures basic edges and patterns")
 print("- AlexNet: 64 filters, more diverse feature detection")
 print("- More filters → more capacity to learn complex features")
 print("- Both learn hierarchical representations")
 
-print("\n✓ Feature visualization complete")
+print("\nFeature visualization complete")
 ```
 
 #### Mini-Challenge: Design Your Own Architecture (60 min)
@@ -816,13 +819,13 @@ class CustomCNN(nn.Module):
         return x
 
 # Create and test your model
-custom_model = CustomCNN()
+custom_model = CustomCNN().to(device)
 custom_params = sum(p.numel() for p in custom_model.parameters())
 
 print(f"\nYour Custom CNN:")
 print(custom_model)
 print(f"\nParameters: {custom_params:,}")
-print(f"Within budget: {'✓ Yes' if custom_params < 500000 else '✗ No'}")
+print(f"Within budget: {'Yes' if custom_params < 500000 else 'No'}")
 
 # Train it
 criterion = nn.CrossEntropyLoss()
@@ -864,7 +867,7 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 custom_accuracy = correct / total
-print(f"\n🎯 Your Custom CNN Test Accuracy: {custom_accuracy:.4f}")
+print(f"\nYour Custom CNN Test Accuracy: {custom_accuracy:.4f}")
 
 # Final comparison
 print("\n" + "="*80)
@@ -877,7 +880,7 @@ print(f"{'AlexNet':<15} | {total_params:>12,} | {alexnet_accuracy:>10.4f}")
 print(f"{'Your CNN':<15} | {custom_params:>12,} | {custom_accuracy:>10.4f}")
 print("="*80)
 
-print("\n✓ Custom architecture complete!")
+print("\nCustom architecture complete!")
 ```
 
 ---

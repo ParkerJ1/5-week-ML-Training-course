@@ -19,7 +19,7 @@ This comprehensive training program covers the fundamentals of machine learning 
 
 **[📋 Week 1 Overview](Week1_Overview.md)**
 
-- [Day 1: NumPy & Arrays](Week1_Day1.md)
+- [Day 1: NumPy & Arrays](Week1_Day1_cleaned.md)
 - [Day 2: Matplotlib & Data Visualization](Week1_Day2.md)
 - [Day 3: Introduction to Machine Learning](Week1_Day3.md)
 - [Day 4: Classification and Logistic Regression](Week1_Day4.md)
