@@ -20,10 +20,7 @@ theme:
 
 nav:
   # The main landing page students see
-  - Course Home: intro.md 
-
-  # The overall course summary (using the Week1_Overview content, renamed for clarity)
-  - Course Overview: overall_overview.md 
+  - Course Home: index.md 
   
   # Grouping the Daily Lessons into Collapsible Week Sections
   - Week 1:
@@ -66,6 +63,13 @@ nav:
     - Day 24: Week5_Day24.md
     - Day 25: Week5_Day25.md
   
+  - Week 6:
+    - Overview: Week6_Overview.md
+    - Day 16: Week6_Day26.md
+    - Day 17: Week6_Day27.md
+    - Day 18: Week6_Day28.md
+    - Day 19: Week6_Day29.md
+    - Day 20: Week6_Day30.md
 
 markdown_extensions:
   - admonition

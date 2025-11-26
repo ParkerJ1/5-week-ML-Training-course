@@ -299,6 +299,9 @@ df_processed['FarePerPerson'] = df_processed['Fare'] / df_processed['FamilySize'
 # Handle missing values
 print("\nHandling missing values...")
 
+# Note: For simplicity, we are preprocessing before splitting. 
+# In production, parameters must be derived from training data only to avoid leakage.
+
 # Age: Fill with median by title and class
 for title in df_processed['Title'].unique():
     for pclass in df_processed['Pclass'].unique():

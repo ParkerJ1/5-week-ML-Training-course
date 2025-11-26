@@ -55,6 +55,7 @@ np.random.seed(42)
 Implement and visualize the key activation functions:
 
 **1. Sigmoid**
+
 ```python
 def sigmoid(x):
     """
@@ -94,9 +95,11 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
+
 *Expected: S-curve for sigmoid, bell curve for derivative*
 
 **2. Tanh**
+
 ```python
 def tanh(x):
     """
@@ -134,9 +137,11 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
+
 *Expected: Similar to sigmoid but centered at zero*
 
 **3. ReLU (Rectified Linear Unit)**
+
 ```python
 def relu(x):
     """
@@ -172,9 +177,11 @@ plt.legend()
 plt.tight_layout()
 plt.show()
 ```
+
 *Expected: Straight line for x>0, flat for x<0*
 
 **4. Compare All**
+
 ```python
 plt.figure(figsize=(12, 5))
 
@@ -277,6 +284,7 @@ print(f"\n{'='*60}")
 print(f"FINAL OUTPUT: {a2[0]:.4f}")
 print(f"{'='*60}")
 ```
+
 *Expected: Follow the computation step-by-step, verify numbers*
 
 #### Exercise 3: Implement Neural Network Class (40 min)
@@ -288,7 +296,7 @@ class NeuralNetwork:
     def __init__(self, input_size, hidden_size, output_size):
         """
         Initialize a 2-layer neural network
-        
+
         Args:
             input_size: number of input features
             hidden_size: number of neurons in hidden layer
@@ -296,43 +304,43 @@ class NeuralNetwork:
         """
         # Initialize weights with small random values
         # He initialization for better training
-        self.W1 = np.random.randn(input_size, hidden_size) * 0.01
+        self.W1 = np.random.randn(input_size, hidden_size) * 0.1
         self.b1 = np.zeros((1, hidden_size))
-        
-        self.W2 = np.random.randn(hidden_size, output_size) * 0.01
+
+        self.W2 = np.random.randn(hidden_size, output_size) * 0.1
         self.b2 = np.zeros((1, output_size))
-        
+
         print(f"Network initialized:")
         print(f"  Input size: {input_size}")
         print(f"  Hidden size: {hidden_size}")
         print(f"  Output size: {output_size}")
         print(f"  Total parameters: {self.count_parameters()}")
-    
+
     def count_parameters(self):
         """Count total number of parameters"""
         return (self.W1.size + self.b1.size + 
                 self.W2.size + self.b2.size)
-    
+
     def forward(self, X):
         """
         Forward propagation
-        
+
         Args:
             X: input data (n_samples, n_features)
-        
+
         Returns:
             output: predictions (n_samples, n_outputs)
         """
         # Hidden layer
         self.z1 = np.dot(X, self.W1) + self.b1
         self.a1 = sigmoid(self.z1)
-        
+
         # Output layer
         self.z2 = np.dot(self.a1, self.W2) + self.b2
         self.a2 = sigmoid(self.z2)
-        
+
         return self.a2
-    
+
     def __repr__(self):
         return (f"NeuralNetwork(\n"
                 f"  W1: {self.W1.shape},\n"
@@ -364,6 +372,7 @@ for i, (x, pred) in enumerate(zip(X_test, predictions)):
 
 print("\nNote: These are random outputs since we haven't trained yet!")
 ```
+
 *Expected: Network runs without errors, produces random outputs*
 
 ---
@@ -390,39 +399,39 @@ def visualize_network_capacity():
     # Generate simple 2D classification data
     np.random.seed(42)
     n_samples = 200
-    
+
     # Create two circular clusters
     theta = np.random.uniform(0, 2*np.pi, n_samples//2)
     r1 = np.random.normal(1, 0.1, n_samples//2)
     r2 = np.random.normal(2, 0.1, n_samples//2)
-    
+
     X_class0 = np.column_stack([r1 * np.cos(theta), r1 * np.sin(theta)])
     X_class1 = np.column_stack([r2 * np.cos(theta), r2 * np.sin(theta)])
-    
+
     X = np.vstack([X_class0, X_class1])
     y = np.hstack([np.zeros(n_samples//2), np.ones(n_samples//2)]).reshape(-1, 1)
-    
+
     # Try different hidden layer sizes
     hidden_sizes = [2, 5, 10, 20]
-    
+
     fig, axes = plt.subplots(2, 2, figsize=(12, 12))
     axes = axes.flatten()
-    
+
     for idx, hidden_size in enumerate(hidden_sizes):
         # Create network
         nn = NeuralNetwork(input_size=2, hidden_size=hidden_size, output_size=1)
-        
+
         # Create decision boundary plot
         h = 0.1
         x_min, x_max = X[:, 0].min() - 0.5, X[:, 0].max() + 0.5
         y_min, y_max = X[:, 1].min() - 0.5, X[:, 1].max() + 0.5
         xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
                              np.arange(y_min, y_max, h))
-        
+
         # Get predictions for mesh
         mesh_predictions = nn.forward(np.c_[xx.ravel(), yy.ravel()])
         mesh_predictions = mesh_predictions.reshape(xx.shape)
-        
+
         # Plot
         axes[idx].contourf(xx, yy, mesh_predictions, alpha=0.4, cmap='RdYlBu', levels=20)
         axes[idx].scatter(X[y.flatten()==0, 0], X[y.flatten()==0, 1], 
@@ -434,11 +443,11 @@ def visualize_network_capacity():
         axes[idx].set_ylabel('Feature 2')
         axes[idx].legend()
         axes[idx].grid(True, alpha=0.3)
-    
+
     plt.suptitle('Network Capacity: Decision Boundaries with Random Weights', fontsize=14)
     plt.tight_layout()
     plt.show()
-    
+
     print("\nObservations:")
     print("- Larger networks (more parameters) have more flexible decision boundaries")
     print("- Even untrained, you can see complexity differences")
@@ -519,7 +528,7 @@ def visualize_network_architecture(nn, title="Neural Network Architecture"):
     Visualize network architecture with weights
     """
     fig, axes = plt.subplots(1, 3, figsize=(16, 5))
-    
+
     # 1. Architecture diagram (simplified - you can elaborate)
     ax = axes[0]
     ax.text(0.1, 0.9, 'Input\nLayer', ha='center', va='center', fontsize=12, 
@@ -528,18 +537,18 @@ def visualize_network_architecture(nn, title="Neural Network Architecture"):
             bbox=dict(boxstyle='round', facecolor='lightgreen'))
     ax.text(0.9, 0.9, 'Output\nLayer', ha='center', va='center', fontsize=12,
             bbox=dict(boxstyle='round', facecolor='lightcoral'))
-    
+
     ax.annotate('', xy=(0.45, 0.9), xytext=(0.15, 0.9),
                 arrowprops=dict(arrowstyle='->', lw=2))
     ax.annotate('', xy=(0.85, 0.9), xytext=(0.55, 0.9),
                 arrowprops=dict(arrowstyle='->', lw=2))
-    
+
     ax.text(0.5, 0.5, f'Parameters: {nn.count_parameters()}', ha='center', fontsize=11)
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
     ax.set_title('Network Structure')
-    
+
     # 2. Weight matrix W1 (input to hidden)
     ax = axes[1]
     im = ax.imshow(nn.W1, cmap='RdBu', aspect='auto', vmin=-0.5, vmax=0.5)
@@ -547,7 +556,7 @@ def visualize_network_architecture(nn, title="Neural Network Architecture"):
     ax.set_xlabel('Hidden Neurons')
     ax.set_ylabel('Input Features')
     plt.colorbar(im, ax=ax)
-    
+
     # 3. Weight matrix W2 (hidden to output)
     ax = axes[2]
     im = ax.imshow(nn.W2, cmap='RdBu', aspect='auto', vmin=-0.5, vmax=0.5)
@@ -555,7 +564,7 @@ def visualize_network_architecture(nn, title="Neural Network Architecture"):
     ax.set_xlabel('Output Neurons')
     ax.set_ylabel('Hidden Neurons')
     plt.colorbar(im, ax=ax)
-    
+
     plt.suptitle(title, fontsize=14, fontweight='bold')
     plt.tight_layout()
     plt.show()
@@ -570,9 +579,9 @@ def visualize_activations(nn, X, title="Activation Flow"):
     """
     # Get activations
     output = nn.forward(X)
-    
+
     fig, axes = plt.subplots(1, 3, figsize=(15, 4))
-    
+
     # Input
     ax = axes[0]
     ax.imshow(X.T, cmap='viridis', aspect='auto')
@@ -580,7 +589,7 @@ def visualize_activations(nn, X, title="Activation Flow"):
     ax.set_xlabel('Sample')
     ax.set_ylabel('Feature')
     plt.colorbar(ax.images[0], ax=ax)
-    
+
     # Hidden activations
     ax = axes[1]
     ax.imshow(nn.a1.T, cmap='viridis', aspect='auto')
@@ -588,7 +597,7 @@ def visualize_activations(nn, X, title="Activation Flow"):
     ax.set_xlabel('Sample')
     ax.set_ylabel('Neuron')
     plt.colorbar(ax.images[0], ax=ax)
-    
+
     # Output
     ax = axes[2]
     ax.imshow(output.T, cmap='viridis', aspect='auto')
@@ -596,7 +605,7 @@ def visualize_activations(nn, X, title="Activation Flow"):
     ax.set_xlabel('Sample')
     ax.set_ylabel('Output')
     plt.colorbar(ax.images[0], ax=ax)
-    
+
     plt.suptitle(title, fontsize=14, fontweight='bold')
     plt.tight_layout()
     plt.show()

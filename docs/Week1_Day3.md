@@ -52,6 +52,7 @@ X_val, X_test, y_val, y_test = train_test_split(X_temp, y_temp, test_size=0.5, r
 
 print(f"Train: {len(X_train)}, Val: {len(X_val)}, Test: {len(X_test)}")
 ```
+
 *Expected: 60, 20, 20 samples*
 
 #### Exercise 2: Linear Regression from Scratch (60 min)
@@ -62,31 +63,34 @@ Implement gradient descent:
 def train_linear_regression(X, y, learning_rate=0.01, epochs=100):
     w, b = 0.0, 0.0
     losses = []
-    
+
+    y = y.reshape(-1,1) # This converts y from a vector of size (100, ) to a matrix of size (100, 1)
+
     for epoch in range(epochs):
         # Forward pass
         y_pred = w * X + b
-        
+
         # Compute loss (MSE)
         loss = np.mean((y - y_pred) ** 2)
         losses.append(loss)
-        
+
         # Compute gradients
         dw = -2 * np.mean(X * (y - y_pred))
         db = -2 * np.mean(y - y_pred)
-        
+
         # Update parameters
         w -= learning_rate * dw
         b -= learning_rate * db
-        
+
         if (epoch + 1) % 10 == 0:
             print(f"Epoch {epoch+1}: Loss = {loss:.4f}")
-    
+
     return w, b, losses
 
-w, b, losses = train_linear_regression(X_train, y_train, learning_rate=0.5, epochs=100)
+w, b, losses = train_linear_regression(X_train, y_train, learning_rate=0.01, epochs=100)
 ```
-*Expected: Loss should decrease over epochs*
+
+*Expected: Loss should decrease over epochs. Try play around with the learning rate and observe the effect*
 
 ---
 
@@ -108,10 +112,10 @@ for degree in degrees:
     poly = PolynomialFeatures(degree=degree)
     X_train_poly = poly.fit_transform(X_train)
     X_val_poly = poly.transform(X_val)
-    
+
     model = LinearRegression()
     model.fit(X_train_poly, y_train)
-    
+
     train_errors.append(mean_squared_error(y_train, model.predict(X_train_poly)))
     val_errors.append(mean_squared_error(y_val, model.predict(X_val_poly)))
 
@@ -123,6 +127,7 @@ plt.ylabel('MSE')
 plt.legend()
 plt.show()
 ```
+
 *Expected: Validation error increases for high degrees (overfitting)*
 
 #### Exercise 4: Regularization (50 min)
@@ -150,6 +155,7 @@ for name, model in models.items():
     val_error = mean_squared_error(y_val, val_pred)
     print(f"{name}: Val MSE = {val_error:.4f}")
 ```
+
 *Expected: Ridge/Lasso may have better validation performance*
 
 #### Mini-Challenge: California Housing (90 min)
@@ -180,11 +186,11 @@ from sklearn.metrics import r2_score
 for alpha in [0.1, 1.0, 10.0]:
     ridge = Ridge(alpha=alpha)
     ridge.fit(X_train_scaled, y_train)
-    
+
     val_pred = ridge.predict(X_val_scaled)
     val_mse = mean_squared_error(y_val, val_pred)
     val_r2 = r2_score(y_val, val_pred)
-    
+
     print(f"Ridge (α={alpha}): MSE={val_mse:.4f}, R²={val_r2:.4f}")
 
 # Final evaluation on test set with best model

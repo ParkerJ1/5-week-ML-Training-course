@@ -7,9 +7,9 @@
 
 ## Program Overview
 
-This comprehensive 5-week program covers the fundamentals of machine learning and deep learning, from Python basics through advanced neural network architectures and deployment.
+This comprehensive training program covers the fundamentals of machine learning and deep learning, from Python basics through advanced neural network architectures, complete project development, and optional production deployment.
 
-**Duration**: 5 weeks | **Daily Commitment**: 8 hours | **Total Hours**: 200
+**Core Duration**: 5 weeks | **Daily Commitment**: 8 hours | **Total Hours**: 200  
 
 ---
 
@@ -17,13 +17,13 @@ This comprehensive 5-week program covers the fundamentals of machine learning an
 
 **[📋 Week 1 Overview](Week1_Overview.md)**
 
-- [Day 1: NumPy & Arrays](Week1_Day1.md) 
-- [Day 2: Matplotlib & Data Visualization](Week1_Day2.md) 
+- [Day 1: NumPy & Arrays](Week1_Day1.md)
+- [Day 2: Matplotlib & Data Visualization](Week1_Day2.md)
 - [Day 3: Introduction to Machine Learning](Week1_Day3.md)
 - [Day 4: Classification and Logistic Regression](Week1_Day4.md)
 - [Day 5: Scikit-learn & Titanic Project](Week1_Day5.md)
 
-**Key Project**: Titanic Survival Prediction
+**Key Project**: Titanic Survival Prediction (>75% accuracy)
 
 ---
 
@@ -37,7 +37,7 @@ This comprehensive 5-week program covers the fundamentals of machine learning an
 - [Day 9: Building Neural Networks in PyTorch](Week2_Day9.md)
 - [Day 10: MNIST Digit Classification Project](Week2_Day10.md)
 
-**Key Project**: MNIST Digit Classification
+**Key Project**: MNIST Digit Classification (>95% accuracy)
 
 ---
 
@@ -51,59 +51,105 @@ This comprehensive 5-week program covers the fundamentals of machine learning an
 - [Day 14: Transfer Learning & Data Augmentation](Week3_Day14.md)
 - [Day 15: CIFAR-10 Classification Project](Week3_Day15.md)
 
-**Key Project**: CIFAR-10 Image Classification
+**Key Project**: CIFAR-10 Image Classification (>85% accuracy)
 
 ---
 
-## Week 4: Advanced Topics & Modern Techniques
+## Week 4: Advanced Architectures
 
 **[📋 Week 4 Overview](Week4_Overview.md)**
 
-- [Day 16: RNNs and Sequence Models](Week4_Day16.md)
+- [Day 16: RNNs and LSTMs](Week4_Day16.md)
 - [Day 17: Attention Mechanisms and Transformers](Week4_Day17.md)
-- [Day 18: Generative Adversarial Networks](Week4_Day18.md)
-- [Day 19: Autoencoders](Week4_Day19.md)
-- [Day 20: Advanced Topics Project](Week4_Day20.md)
+- [Day 18: NLP Fundamentals](Week4_Day18.md)
+- [Day 19: Generative Adversarial Networks](Week4_Day19.md)
+- [Day 20: Sentiment Analysis Project](Week4_Day20.md)
 
-**Key Project**: Advanced ML Application
+**Key Project**: Movie Review Sentiment Analysis (>85% accuracy)
 
 ---
 
-## Week 5: Best Practices & Capstone Project
+## Week 5: Capstone Project Development
 
 **[📋 Week 5 Overview](Week5_Overview.md)**
 
-- [Day 21: Model Deployment and MLOps](Week5_Day21.md)
-- [Day 22: Interpretability and Explainability](Week5_Day22.md)
-- [Day 23: Ethics and Best Practices in ML](Week5_Day23.md)
-- [Day 24: Capstone Project - Day 1](Week5_Day24.md)
-- [Day 25: Capstone Project - Day 2 & Presentations](Week5_Day25.md)
+- [Day 21: Project Planning & Setup](Week5_Day21.md)
+- [Day 22: Data Pipeline & Baseline Model](Week5_Day22.md)
+- [Day 23: Model Development & Iteration](Week5_Day23.md)
+- [Day 24: Testing & Refinement](Week5_Day24.md)
+- [Day 25: Documentation & Presentation](Week5_Day25.md)
 
-**Key Project**: Comprehensive Capstone Project
+**Key Project**: Independent Capstone Project (Choose from 3 tracks)
+
+### Project Tracks:
+1. **Medical Image Classification** - Pneumonia detection from chest X-rays
+2. **NLP Sentiment Analysis** - IMDB movie review classification
+3. **Time Series Forecasting** - Stock price movement prediction
+
+**Deliverable**: Portfolio-ready project with professional documentation
 
 ---
 
-## Daily Schedule Format
+## Week 6: Production Machine Learning (OPTIONAL)
 
-Each day follows this structure:
+**[📋 Week 6 Overview](Week6_Overview.md)**
 
-### Morning Session (4 hours)
+- [Day 26: Model Optimization](Week6_Day26.md) - Quantization, Pruning, ONNX
+- [Day 27: Model Deployment](Week6_Day27.md) - FastAPI, Docker, Cloud
+- [Day 28: MLOps Fundamentals](Week6_Day28.md) - Tracking, Versioning, Pipelines
+- [Day 29: Best Practices](Week6_Day29.md) - Testing, Documentation, Code Quality
+- [Day 30: Production Project](Week6_Day30.md) - Deploy Your Week 5 Project
 
-- Optional: Daily check-in with peers on Teams (15 min)
-- Video Learning (60-120 min)
-- Reference Material (30 min)
-- Hands-on Coding - Part 1 (remainder)
+**Key Project**: Production-ready ML API with monitoring
 
-### Afternoon Session (4 hours)
+**Deliverable**: Deployed ML system with API, Docker, and monitoring
 
-- Video Learning (30 min, if applicable)
-- Hands-on Coding - Part 2 (3-3.5 hours)
+---
 
-### Reflection & Consolidation (30 min)
+## Program Structure Summary
 
-- Review key concepts
-- Write daily reflection
-- List questions for check-in
+### Core Program (Weeks 1-5) - REQUIRED
+- **Week 1**: Python & ML Fundamentals
+- **Week 2**: Neural Networks
+- **Week 3**: Computer Vision & CNNs
+- **Week 4**: Advanced Architectures (RNN, Transformer, GAN)
+- **Week 5**: Independent Capstone Project
+
+### Optional Extension (Week 6)
+- **Week 6**: Production ML Deployment
+
+---
+
+## File Structure
+
+```
+📁 Training Materials/
+├── INDEX.md (this file)
+│
+├── 📁 Week 1: Python & ML Fundamentals/
+│   ├── Week1_Overview.md
+│   └── Week1_Day1.md through Day5.md
+│
+├── 📁 Week 2: Neural Networks/
+│   ├── Week2_Overview.md
+│   └── Week2_Day6.md through Day10.md
+│
+├── 📁 Week 3: Deep Learning & CNNs/
+│   ├── Week3_Overview.md
+│   └── Week3_Day11.md through Day15.md
+│
+├── 📁 Week 4: Advanced Architectures/
+│   ├── Week4_Overview.md
+│   └── Week4_Day16.md through Day20.md
+│
+├── 📁 Week 5: Capstone Project (NEW)/
+│   ├── Week5_Overview.md
+│   └── Week5_Day21.md through Day25.md
+│
+└── 📁 Week 6: Production ML (OPTIONAL)/
+    ├── Week6_Overview.md
+    └── Week6_Day26.md through Day30.md
+```
 
 ---
 
@@ -116,60 +162,96 @@ Each day follows this structure:
 3. **Watch Videos** - All video links are embedded with durations
 4. **Complete Exercises** - Hands-on coding is essential for learning
 5. **Daily Reflection** - Document your learning and questions
-6. **Check-ins** - Monday, Wednesday, Friday with instructor
+6. **Check-ins** - Monday, Wednesday, Friday with instructor (Weeks 1-4)
 
 ### Resources Needed
 
+**Core Program**:
 - Google Colab account (free)
 - Stable internet connection
 - 8 hours per day for focused learning
 - Microsoft Teams for communication
 - Notebook for reflections
 
+**Week 6 (Optional)**:
+- Docker installed locally
+- Basic command line familiarity
+- Cloud account (AWS/GCP/Azure) for deployment (optional)
+
+### Assessment
+
+Completion of exercises and projects with bona fide effort receives full credit for vacation work.
+
+**Week 5 Capstone**: Must demonstrate working project with:
+- Trained model (>80% accuracy target)
+- Professional documentation
+- Results visualization
+- Presentation readiness
+
 ---
 
 ## Key Learning Outcomes
 
-By the end of this program, you will be able to:
+### By End of Week 5 (Core Program):
 
 ✅ Master Python libraries (NumPy, Matplotlib, PyTorch)  
 ✅ Implement ML algorithms from scratch  
 ✅ Build and train neural networks  
 ✅ Apply CNNs to image classification  
-✅ Understand modern architectures (ResNet, Transformers, GANs)  
-✅ Deploy models to production  
-✅ Practice ethical AI development  
-✅ Complete end-to-end ML projects  
+✅ Understand modern architectures (ResNet, RNN, Transformer, GAN)  
+✅ Complete end-to-end ML projects independently  
+✅ Document work professionally  
+✅ Present technical projects effectively  
+
+### By End of Week 6 (Optional):
+
+✅ Optimize models for production (4x size reduction)  
+✅ Deploy models as REST APIs  
+✅ Containerize applications with Docker  
+✅ Implement monitoring and logging  
+✅ Apply MLOps best practices  
+✅ Write production-quality code with tests  
 
 ---
 
 ## Support & Communication
 
 - **Microsoft Teams**: Group for questions and peer support
-- **Check-ins**: Monday, Wednesday, Friday (approximately 1 hour each)
+- **Check-ins**: Monday, Wednesday, Friday 
 - **Email**: For individual concerns
 - **Peer Learning**: Collaborate and learn from classmates
 
 ---
 
-## Tips for Success
+## Portfolio Projects
 
-- **Watch all video tutorials** completely before starting exercises
-- **Type code, don't copy** - Understanding comes from doing. Except for print statements, plotting statements etc I recommend that you should write out every line of code, unless you understand it completely.
-- **Complete all reflections** - They consolidate learning
-- **Form study groups** - Learn together on Teams. Feel free to compare your solutions with peers to learn different approaches
-- **Portfolio** - feel free to consolidate all the code as a basic portfolio of your work, to which you can add and contribute as you grow in Machine Learning.
+By the end of the program, you will have completed:
+
+1. **Titanic Survival Prediction** (Week 1) - Binary classification
+2. **MNIST Digit Classification** (Week 2) - Neural networks from scratch
+3. **CIFAR-10 Image Classification** (Week 3) - CNNs and transfer learning
+4. **Sentiment Analysis** (Week 4) - RNNs/LSTMs for NLP
+5. **Independent Capstone** (Week 5) - Complete ML system
+6. **Production API** (Week 6, Optional) - Deployed ML system
+
+**All projects are portfolio-ready with professional documentation!**
 
 ---
 
 ## Ready to Begin?
 
-Start with **[Week 1 Overview](Week1_Overview.md)** and then proceed to **[Day 1: NumPy & Arrays](Week1_Day1.md)**
+### Start Here:
+1. Read **[Week 1 Overview](Week1_Overview.md)**
+2. Begin with **[Day 1: NumPy & Arrays](Week1_Day1.md)**
+3. Join Microsoft Teams group
+4. Set up Google Colab account
+
+---
 
 **Good luck with your machine learning journey! 🚀**
 
 ---
 
-*Last Updated: November 2024*  
+*Last Updated: November 2025*  
 *University of KwaZulu-Natal*  
-*Computer Engineering Department*
+*Discipline of Electrical, Electronic and Computer Engineering*  
