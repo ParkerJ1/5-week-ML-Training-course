@@ -1,7 +1,9 @@
 # 5-Week Machine Learning & Deep Learning Training Program
 
-**University of KwaZulu-Natal**  
-**Computer Engineering 4th Year Students**
+*Jonathan Parker*  
+*Discipline of Electrical, Electronic and Computer Engineering*  
+*University of KwaZulu-Natal*  
+*Last Updated: November 2025*  
 
 ---
 
@@ -219,7 +221,7 @@ By the end of the program, you will have completed:
 
 ---
 
-*Last Updated: November 2025*
+*Last Updated: November 2025*  
 *Jonathan Parker*  
 *Discipline of Electrical, Electronic and Computer Engineering*  
 *University of KwaZulu-Natal*  
