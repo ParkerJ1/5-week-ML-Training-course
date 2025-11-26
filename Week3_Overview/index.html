@@ -1,0 +1,2899 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Comprehensive, guided training for Machine Learning essentials.">
+      
+      
+      
+        <link rel="canonical" href="https://parkerj1.github.io/ml-course/Week3_Overview/">
+      
+      
+        <link rel="prev" href="../Week2_Day10/">
+      
+      
+        <link rel="next" href="../Week3_Day11/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>Overview - 5-Week Guided Machine Learning Training</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#week-3-overview-deep-learning-convolutional-neural-networks" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="5-Week Guided Machine Learning Training" class="md-header__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            5-Week Guided Machine Learning Training
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://parkerj1.github.com/your-username/ml-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Parkerj1
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="5-Week Guided Machine Learning Training" class="md-nav__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    5-Week Guided Machine Learning Training
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://parkerj1.github.com/your-username/ml-course" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Parkerj1
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overall_overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Course Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 1
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 1
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Day1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Day2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Day3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Day4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 4
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week1_Day5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 5
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 2
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 2
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Day6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Day7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 7
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Day8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 8
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Day9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 9
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week2_Day10/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 10
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 3
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 3
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weekly-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Learning Outcomes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primary-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week Progression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#days-11-12-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Days 11-12: Foundation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#days-13-14-modern-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Days 13-14: Modern Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-15-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 15: Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-time-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Time Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-tools-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Tools This Week
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Tools This Week">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#torchvisionmodels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        torchvision.models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvisiontransforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        torchvision.transforms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-acceleration-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Acceleration (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-vs-week-3-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 2 vs Week 3 Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Challenges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-1-convolutions-are-conceptually-confusing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 1: "Convolutions are conceptually confusing"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2-too-many-architectures-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 2: "Too many architectures to remember"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3-training-is-too-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 3: "Training is too slow"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-4-accuracy-plateaus-around-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 4: "Accuracy plateaus around 70%"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-5-shape-mismatches-everywhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 5: "Shape mismatches everywhere"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Success
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips for Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization-is-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization is Key
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-add-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start Simple, Add Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-dont-memorize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand, Don't Memorize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leverage GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-week-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to Week 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-milestones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment Milestones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-cnns-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why CNNs Matter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-friday-youll-be-able-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Friday, You'll Be Able To:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-future-weeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to Future Weeks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 3 Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peer Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Thoughts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week3_Day11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week3_Day12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week3_Day13/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 13
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week3_Day14/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 14
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week3_Day15/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 15
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 4
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 4
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Day16/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 16
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Day17/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 17
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Day18/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 18
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Day19/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 19
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week4_Day20/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 20
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Week 5
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Week 5
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Overview.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Day21.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 21
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Day22.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 22
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Day23.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 23
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Day24.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 24
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Week5_Day25.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Day 25
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week Goals
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#weekly-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Weekly Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Learning Outcomes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#primary-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Primary Resources
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Primary Resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#video-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Text Resources
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-progression" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week Progression
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Week Progression">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#days-11-12-foundation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Days 11-12: Foundation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#days-13-14-modern-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Days 13-14: Modern Techniques
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#day-15-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Day 15: Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#daily-time-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Daily Time Allocation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#new-tools-this-week" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        New Tools This Week
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="New Tools This Week">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#torchvisionmodels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        torchvision.models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#torchvisiontransforms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        torchvision.transforms
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gpu-acceleration-recommended" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GPU Acceleration (Recommended)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-2-vs-week-3-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 2 vs Week 3 Comparison
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Challenges
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Common Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#challenge-1-convolutions-are-conceptually-confusing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 1: "Convolutions are conceptually confusing"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-2-too-many-architectures-to-remember" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 2: "Too many architectures to remember"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-3-training-is-too-slow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 3: "Training is too slow"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-4-accuracy-plateaus-around-70" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 4: "Accuracy plateaus around 70%"
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#challenge-5-shape-mismatches-everywhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Challenge 5: "Shape mismatches everywhere"
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tips-for-success" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for Success
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tips for Success">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualization-is-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visualization is Key
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#start-simple-add-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Start Simple, Add Complexity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#understand-dont-memorize" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Understand, Don't Memorize
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#leverage-gpu" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Leverage GPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#connect-to-week-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connect to Week 2
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#assessment-milestones" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assessment Milestones
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motivation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Motivation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Motivation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#why-cnns-matter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Why CNNs Matter
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#by-friday-youll-be-able-to" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        By Friday, You'll Be Able To:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-future-weeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Connection to Future Weeks
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#week-3-checklist" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Week 3 Checklist
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#study-recommendations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Study Recommendations
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Study Recommendations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#active-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Active Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#peer-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Peer Learning
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deep Understanding
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-thoughts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final Thoughts
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="week-3-overview-deep-learning-convolutional-neural-networks">Week 3 Overview: Deep Learning &amp; Convolutional Neural Networks<a class="headerlink" href="#week-3-overview-deep-learning-convolutional-neural-networks" title="Permanent link">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>Week 3 introduces Convolutional Neural Networks (CNNs) - the architecture that revolutionized computer vision. You'll learn why convolutions work, how to build modern CNN architectures, and complete CIFAR-10 color image classification. This week bridges the gap between understanding neural networks (Week 2) and applying them to real-world image problems.</p>
+<p>CNNs are the backbone of facial recognition, self-driving cars, medical image analysis, and countless other computer vision applications. By understanding CNNs deeply, you'll grasp the foundation of modern AI vision systems.</p>
+<h2 id="week-goals">Week Goals<a class="headerlink" href="#week-goals" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Understand convolutional layers and how they detect features hierarchically</li>
+<li>Learn pooling, padding, and stride operations</li>
+<li>Implement CNNs from scratch in NumPy and PyTorch</li>
+<li>Study classic architectures: LeNet, AlexNet, VGG, ResNet</li>
+<li>Master transfer learning and data augmentation</li>
+<li>Complete CIFAR-10 classification project (10 classes, 32×32 color images)</li>
+<li>Achieve &gt;85% accuracy on CIFAR-10</li>
+</ul>
+<h2 id="weekly-structure">Weekly Structure<a class="headerlink" href="#weekly-structure" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Day 11</strong>: CNN Theory - Convolutions, Filters, Feature Maps</li>
+<li><strong>Day 12</strong>: Classic Architectures - LeNet, AlexNet  </li>
+<li><strong>Day 13</strong>: Modern Architectures - VGG, ResNet, Skip Connections</li>
+<li><strong>Day 14</strong>: Transfer Learning &amp; Data Augmentation</li>
+<li><strong>Day 15</strong>: CIFAR-10 Project - Color Image Classification</li>
+</ul>
+<h2 id="key-learning-outcomes">Key Learning Outcomes<a class="headerlink" href="#key-learning-outcomes" title="Permanent link">&para;</a></h2>
+<p>By the end of Week 3, you will be able to:</p>
+<ul>
+<li>Explain how convolutions exploit spatial structure in images</li>
+<li>Calculate output sizes for conv/pool layers given input size, kernel, stride, padding</li>
+<li>Implement 2D convolutions from scratch</li>
+<li>Build and train CNNs in PyTorch</li>
+<li>Understand weight sharing and translation invariance</li>
+<li>Recognize classic CNN architectures (LeNet through ResNet)</li>
+<li>Apply transfer learning using pretrained models</li>
+<li>Design effective data augmentation strategies</li>
+<li>Complete end-to-end image classification projects</li>
+<li>Visualize and interpret learned features</li>
+</ul>
+<h2 id="primary-resources">Primary Resources<a class="headerlink" href="#primary-resources" title="Permanent link">&para;</a></h2>
+<h3 id="video-resources">Video Resources<a class="headerlink" href="#video-resources" title="Permanent link">&para;</a></h3>
+<p><strong>3Blue1Brown &amp; Visual Explanations</strong> (Primary)
+- Visual, intuitive explanations of convolutions
+- How CNNs "see" and process images
+- Perfect for building deep intuition</p>
+<p><strong>StatQuest by Josh Starmer</strong> (Supporting)
+- Clear breakdowns of CNN components
+- Detailed technical explanations
+- Complements visual intuition</p>
+<p><strong>Research Paper Walkthroughs</strong> (Advanced)
+- Yannic Kilcher for paper deep-dives
+- Understanding architectural innovations
+- Historical context and motivation</p>
+<p><strong>PyTorch Tutorials</strong> (Practical)
+- Official torchvision tutorials
+- Transfer learning patterns
+- Production-ready code</p>
+<h3 id="text-resources">Text Resources<a class="headerlink" href="#text-resources" title="Permanent link">&para;</a></h3>
+<p><strong>Dive into Deep Learning (d2l.ai)</strong> (Primary)
+- Chapter 7: Convolutional Neural Networks (theory)
+- Chapter 8: Modern CNN Architectures (applications)
+- Mathematical foundations with PyTorch code
+- Interactive examples</p>
+<p><strong>Original Research Papers</strong> (Secondary)
+- LeNet-5 (1998): Gradient-Based Learning Applied to Document Recognition
+- AlexNet (2012): ImageNet Classification with Deep CNNs
+- VGG (2014): Very Deep Convolutional Networks
+- ResNet (2015): Deep Residual Learning for Image Recognition</p>
+<p><strong>PyTorch Documentation</strong> (Reference)
+- torch.nn.Conv2d, MaxPool2d
+- torchvision.models (pretrained models)
+- torchvision.transforms (data augmentation)</p>
+<h2 id="week-progression">Week Progression<a class="headerlink" href="#week-progression" title="Permanent link">&para;</a></h2>
+<h3 id="days-11-12-foundation">Days 11-12: Foundation<a class="headerlink" href="#days-11-12-foundation" title="Permanent link">&para;</a></h3>
+<p>Build understanding from first principles:
+- What convolutions are and why they work
+- Implement convolutions manually
+- Study how CNNs evolved (LeNet → AlexNet)
+- Understand the ImageNet breakthrough</p>
+<h3 id="days-13-14-modern-techniques">Days 13-14: Modern Techniques<a class="headerlink" href="#days-13-14-modern-techniques" title="Permanent link">&para;</a></h3>
+<p>Master state-of-the-art approaches:
+- Very deep networks (VGG)
+- Skip connections (ResNet)
+- Transfer learning
+- Data augmentation</p>
+<h3 id="day-15-integration">Day 15: Integration<a class="headerlink" href="#day-15-integration" title="Permanent link">&para;</a></h3>
+<p>Apply everything in complete project:
+- CIFAR-10 classification
+- Multiple architectures
+- Comprehensive analysis
+- Portfolio-ready documentation</p>
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>From Week 2, you should be comfortable with:
+- PyTorch basics (tensors, autograd, nn.Module)
+- Training loops and validation
+- DataLoaders and datasets
+- Loss functions and optimizers
+- Model evaluation</p>
+<h2 id="daily-time-allocation">Daily Time Allocation<a class="headerlink" href="#daily-time-allocation" title="Permanent link">&para;</a></h2>
+<p>Same structure as previous weeks:
+- <strong>Morning Session</strong> (4 hours): Video learning + foundational exercises
+- <strong>Afternoon Session</strong> (4 hours): Advanced exercises + mini-challenge
+- <strong>Reflection</strong> (30 minutes): Consolidate learning</p>
+<p>Total: <strong>8 hours per day</strong></p>
+<h2 id="new-tools-this-week">New Tools This Week<a class="headerlink" href="#new-tools-this-week" title="Permanent link">&para;</a></h2>
+<h3 id="torchvisionmodels">torchvision.models<a class="headerlink" href="#torchvisionmodels" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torchvision.models</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">models</span>
+
+<span class="c1"># Load pretrained ResNet</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet18</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="torchvisiontransforms">torchvision.transforms<a class="headerlink" href="#torchvisiontransforms" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">torchvision</span><span class="w"> </span><span class="kn">import</span> <span class="n">transforms</span>
+
+<span class="n">transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span>
+    <span class="n">transforms</span><span class="o">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span>
+    <span class="n">transforms</span><span class="o">.</span><span class="n">RandomCrop</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="mi">4</span><span class="p">),</span>
+    <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+    <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">((</span><span class="mf">0.5</span><span class="p">,),</span> <span class="p">(</span><span class="mf">0.5</span><span class="p">,))</span>
+<span class="p">])</span>
+</code></pre></div>
+
+<h3 id="gpu-acceleration-recommended">GPU Acceleration (Recommended)<a class="headerlink" href="#gpu-acceleration-recommended" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s2">&quot;cuda&quot;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s2">&quot;cpu&quot;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+</code></pre></div>
+
+<p><strong>Colab Setup:</strong> Runtime → Change runtime type → GPU (free!)</p>
+<h2 id="week-2-vs-week-3-comparison">Week 2 vs Week 3 Comparison<a class="headerlink" href="#week-2-vs-week-3-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Week 2 (Fully Connected)</th>
+<th>Week 3 (Convolutional)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Input</strong></td>
+<td>Flattened vectors</td>
+<td>2D/3D spatial data</td>
+</tr>
+<tr>
+<td><strong>Parameters</strong></td>
+<td>~100K</td>
+<td>~1-10M</td>
+</tr>
+<tr>
+<td><strong>Key Operation</strong></td>
+<td>Matrix multiplication</td>
+<td>Convolution</td>
+</tr>
+<tr>
+<td><strong>Structure</strong></td>
+<td>Treats pixels independently</td>
+<td>Exploits spatial relationships</td>
+</tr>
+<tr>
+<td><strong>Invariance</strong></td>
+<td>None</td>
+<td>Translation invariance</td>
+</tr>
+<tr>
+<td><strong>Dataset</strong></td>
+<td>MNIST (28×28 grayscale)</td>
+<td>CIFAR-10 (32×32 RGB)</td>
+</tr>
+<tr>
+<td><strong>Architecture</strong></td>
+<td>Simple (2-4 layers)</td>
+<td>Deep hierarchies (10-100+ layers)</td>
+</tr>
+<tr>
+<td><strong>Training</strong></td>
+<td>CPU sufficient</td>
+<td>GPU strongly recommended</td>
+</tr>
+</tbody>
+</table>
+<h2 id="common-challenges">Common Challenges<a class="headerlink" href="#common-challenges" title="Permanent link">&para;</a></h2>
+<h3 id="challenge-1-convolutions-are-conceptually-confusing">Challenge 1: "Convolutions are conceptually confusing"<a class="headerlink" href="#challenge-1-convolutions-are-conceptually-confusing" title="Permanent link">&para;</a></h3>
+<p><strong>Solution:</strong>
+- Start with 1D convolutions (signals)
+- Draw 2D convolutions by hand
+- Use online visualization tools
+- Connect to familiar concepts (blurring, edge detection)</p>
+<h3 id="challenge-2-too-many-architectures-to-remember">Challenge 2: "Too many architectures to remember"<a class="headerlink" href="#challenge-2-too-many-architectures-to-remember" title="Permanent link">&para;</a></h3>
+<p><strong>Solution:</strong>
+- Focus on understanding <em>why</em> architectures evolved
+- Learn principles, not memorization
+- Key concepts: depth, skip connections, efficiency</p>
+<h3 id="challenge-3-training-is-too-slow">Challenge 3: "Training is too slow"<a class="headerlink" href="#challenge-3-training-is-too-slow" title="Permanent link">&para;</a></h3>
+<p><strong>Solution:</strong>
+- Use GPU in Colab (free!)
+- Start with small models for debugging
+- Use subsets of data initially
+- Leverage transfer learning</p>
+<h3 id="challenge-4-accuracy-plateaus-around-70">Challenge 4: "Accuracy plateaus around 70%"<a class="headerlink" href="#challenge-4-accuracy-plateaus-around-70" title="Permanent link">&para;</a></h3>
+<p><strong>Solution:</strong>
+- Check learning rate (try scheduler)
+- Add data augmentation
+- Try deeper architecture
+- Use transfer learning
+- Verify batch norm is working
+- Check for implementation bugs</p>
+<h3 id="challenge-5-shape-mismatches-everywhere">Challenge 5: "Shape mismatches everywhere"<a class="headerlink" href="#challenge-5-shape-mismatches-everywhere" title="Permanent link">&para;</a></h3>
+<p><strong>Solution:</strong>
+- Print tensor shapes after every layer
+- Calculate expected output sizes manually
+- Use torchsummary package
+- Understand padding effects</p>
+<h2 id="tips-for-success">Tips for Success<a class="headerlink" href="#tips-for-success" title="Permanent link">&para;</a></h2>
+<h3 id="visualization-is-key">Visualization is Key<a class="headerlink" href="#visualization-is-key" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CNNs are inherently visual</li>
+<li>Visualize filters, feature maps, predictions</li>
+<li>Use tools like matplotlib, tensorboard</li>
+<li>See what the network "sees"</li>
+</ul>
+<h3 id="start-simple-add-complexity">Start Simple, Add Complexity<a class="headerlink" href="#start-simple-add-complexity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Begin with tiny CNN (1-2 conv layers)</li>
+<li>Verify it works</li>
+<li>Gradually add depth, techniques</li>
+<li>Debug incrementally</li>
+</ul>
+<h3 id="understand-dont-memorize">Understand, Don't Memorize<a class="headerlink" href="#understand-dont-memorize" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Why does this architecture choice help?</li>
+<li>What problem does this solve?</li>
+<li>When would I use this?</li>
+</ul>
+<h3 id="leverage-gpu">Leverage GPU<a class="headerlink" href="#leverage-gpu" title="Permanent link">&para;</a></h3>
+<ul>
+<li>CNNs benefit enormously from GPU</li>
+<li>Colab provides free GPU access</li>
+<li>Expect 10-50x speedup</li>
+</ul>
+<h3 id="connect-to-week-2">Connect to Week 2<a class="headerlink" href="#connect-to-week-2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Similar training patterns</li>
+<li>Same debugging approaches</li>
+<li>Different architecture, same principles</li>
+</ul>
+<h2 id="assessment-milestones">Assessment Milestones<a class="headerlink" href="#assessment-milestones" title="Permanent link">&para;</a></h2>
+<p><strong>By Day 11 End:</strong>
+- ☐ Understand convolutions conceptually
+- ☐ Implement 2D convolution from scratch
+- ☐ Build basic CNN in PyTorch
+- ☐ Visualize learned filters</p>
+<p><strong>By Day 13 End:</strong>
+- ☐ Implement ResNet architecture
+- ☐ Understand skip connections deeply
+- ☐ Train deep networks successfully
+- ☐ Compare architectures empirically</p>
+<p><strong>By Day 15 End:</strong>
+- ☐ Complete CIFAR-10 project
+- ☐ Achieve &gt;85% test accuracy
+- ☐ Professional documentation
+- ☐ Understand transfer learning
+- ☐ Portfolio-ready results</p>
+<h2 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h2>
+<h3 id="why-cnns-matter">Why CNNs Matter<a class="headerlink" href="#why-cnns-matter" title="Permanent link">&para;</a></h3>
+<p><strong>Real-World Applications:</strong>
+- <strong>Computer Vision</strong>: Object detection, facial recognition, scene understanding
+- <strong>Medical AI</strong>: Disease detection from X-rays, MRIs, CT scans
+- <strong>Autonomous Vehicles</strong>: Lane detection, obstacle recognition
+- <strong>Content Moderation</strong>: Inappropriate content detection
+- <strong>Agriculture</strong>: Crop disease identification
+- <strong>Security</strong>: Surveillance systems
+- <strong>Retail</strong>: Visual search, product recommendations</p>
+<p><strong>Career Relevance:</strong>
+- Most in-demand deep learning skill
+- Foundation for advanced topics
+- Essential for CV/AI roles
+- Transferable to other domains</p>
+<h3 id="by-friday-youll-be-able-to">By Friday, You'll Be Able To:<a class="headerlink" href="#by-friday-youll-be-able-to" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Build image classifiers for any dataset</li>
+<li>Use pretrained models (ResNet, VGG, etc.)</li>
+<li>Understand research papers on CNNs</li>
+<li>Design custom architectures</li>
+<li>Debug vision systems</li>
+<li>Have impressive portfolio project</li>
+</ul>
+<p><strong>This is where theory meets powerful real-world applications! 🚀</strong></p>
+<h2 id="connection-to-future-weeks">Connection to Future Weeks<a class="headerlink" href="#connection-to-future-weeks" title="Permanent link">&para;</a></h2>
+<p><strong>Week 3 → Week 4:</strong>
+- CNNs (spatial) → RNNs (temporal/sequential)
+- Convolutions → Attention mechanisms
+- Image features → Text/sequence features
+- CNNs as components in larger systems</p>
+<p><strong>Week 3 → Week 5:</strong>
+- Architecture design → Deployment considerations
+- Model complexity → Production trade-offs
+- Experimentation → Best practices</p>
+<h2 id="week-3-checklist">Week 3 Checklist<a class="headerlink" href="#week-3-checklist" title="Permanent link">&para;</a></h2>
+<p><strong>Before Starting:</strong>
+- ☐ Week 2 complete and understood
+- ☐ Comfortable with PyTorch
+- ☐ Understand neural network training
+- ☐ Colab account ready (with GPU access)
+- ☐ Ready to work with images</p>
+<p><strong>During the Week:</strong>
+- ☐ Watch all assigned videos
+- ☐ Complete all coding exercises
+- ☐ Implement architectures from scratch
+- ☐ Attend check-ins (M/W/F)
+- ☐ Complete daily reflections
+- ☐ Visualize everything</p>
+<p><strong>End of Week:</strong>
+- ☐ CIFAR-10 project complete
+- ☐ Understand CNNs deeply
+- ☐ Can use transfer learning
+- ☐ Portfolio project documented
+- ☐ Ready for Week 4</p>
+<h2 id="study-recommendations">Study Recommendations<a class="headerlink" href="#study-recommendations" title="Permanent link">&para;</a></h2>
+<h3 id="active-learning">Active Learning<a class="headerlink" href="#active-learning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Code along</strong> with videos</li>
+<li><strong>Modify examples</strong> - see what breaks</li>
+<li><strong>Compare approaches</strong> - which works better?</li>
+<li><strong>Visualize constantly</strong> - what is the network learning?</li>
+</ul>
+<h3 id="peer-learning">Peer Learning<a class="headerlink" href="#peer-learning" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Share visualizations</strong> on Teams</li>
+<li><strong>Compare results</strong> on CIFAR-10</li>
+<li><strong>Discuss architectures</strong> - why did you choose that?</li>
+<li><strong>Debug together</strong> - two heads better than one</li>
+</ul>
+<h3 id="deep-understanding">Deep Understanding<a class="headerlink" href="#deep-understanding" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Why does this work?</strong> - Always ask</li>
+<li><strong>Draw architectures</strong> - Sketch networks by hand</li>
+<li><strong>Calculate by hand</strong> - Output sizes, parameter counts</li>
+<li><strong>Connect concepts</strong> - How does this relate to Week 2?</li>
+</ul>
+<h2 id="final-thoughts">Final Thoughts<a class="headerlink" href="#final-thoughts" title="Permanent link">&para;</a></h2>
+<p>Week 3 is where neural networks become truly powerful for vision tasks. The concepts you learn this week (convolution, hierarchy, skip connections, transfer learning) are fundamental to modern AI.</p>
+<p>CNNs represent one of deep learning's greatest success stories - taking computer vision from hand-crafted features to learned representations that surpass human performance on many tasks.</p>
+<p>By completing this week, you'll not just know <em>how</em> to use CNNs, but <em>why</em> they work, <em>when</em> to use them, and <em>how</em> to design effective architectures.</p>
+<p><strong>The concepts are challenging but the payoff is enormous. Let's build some computer vision systems!</strong></p>
+<hr />
+<p><strong>Ready to start?</strong> Begin with <a href="../Week3_Day11/">Day 11: CNN Theory &amp; Convolutions</a></p>
+<p><strong>Need to review?</strong> Go back to <a href="../Week2_Overview/">Week 2 Overview</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
