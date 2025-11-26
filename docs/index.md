@@ -120,39 +120,6 @@ This comprehensive training program covers the fundamentals of machine learning 
 
 ---
 
-## File Structure
-
-```
-📁 Training Materials/
-├── INDEX.md (this file)
-│
-├── 📁 Week 1: Python & ML Fundamentals/
-│   ├── Week1_Overview.md
-│   └── Week1_Day1.md through Day5.md
-│
-├── 📁 Week 2: Neural Networks/
-│   ├── Week2_Overview.md
-│   └── Week2_Day6.md through Day10.md
-│
-├── 📁 Week 3: Deep Learning & CNNs/
-│   ├── Week3_Overview.md
-│   └── Week3_Day11.md through Day15.md
-│
-├── 📁 Week 4: Advanced Architectures/
-│   ├── Week4_Overview.md
-│   └── Week4_Day16.md through Day20.md
-│
-├── 📁 Week 5: Capstone Project (NEW)/
-│   ├── Week5_Overview.md
-│   └── Week5_Day21.md through Day25.md
-│
-└── 📁 Week 6: Production ML (OPTIONAL)/
-    ├── Week6_Overview.md
-    └── Week6_Day26.md through Day30.md
-```
-
----
-
 ## How to Use These Materials
 
 ### Daily Workflow
@@ -248,10 +215,12 @@ By the end of the program, you will have completed:
 
 ---
 
-**Good luck with your machine learning journey! 🚀**
+**Good luck with your machine learning journey!**
 
 ---
 
-*Last Updated: November 2025*  
-*University of KwaZulu-Natal*  
+*Last Updated: November 2025*
+*Jonathan Parker*  
 *Discipline of Electrical, Electronic and Computer Engineering*  
+*University of KwaZulu-Natal*  
+
