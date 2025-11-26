@@ -1,0 +1,17 @@
+\usepackage{fontspec}
+% Choose a font known for high Unicode coverage.
+\setmainfont{DejaVu Sans} 
+\setsansfont{DejaVu Sans}
+\setmonofont{DejaVu Sans Mono}
+
+% ----------------------------------------------------
+% Adjust Margins using the geometry package
+% We define the margins here (e.g., 2cm all around)
+% ----------------------------------------------------
+\usepackage[margin=2cm]{geometry} 
+
+\usepackage{enumitem}
+
+% Redefine the 'itemize' environment (for bulleted lists)
+\setlist[itemize,1]{label=\textbullet} % Uses the standard TeX bullet point (\textbullet)
+\setlist[itemize,2]{label=--} % Uses a dash for nested lists

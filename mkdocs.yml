@@ -1,0 +1,75 @@
+site_name: 5-Week Guided Machine Learning Training
+site_url: 'https://parkerj1.github.io/ml-course/' # Optional, but good practice
+site_description: Comprehensive, guided training for Machine Learning essentials.
+repo_url: 'https://parkerj1.github.com/your-username/ml-course'
+theme:
+  name: material
+  palette:
+    # Default (Light) mode settings
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night # icon for dark mode
+        name: Switch to dark mode
+    # Dark mode settings
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny # icon for light mode
+        name: Switch to light mode
+
+nav:
+  # The main landing page students see
+  - Course Home: intro.md 
+
+  # The overall course summary (using the Week1_Overview content, renamed for clarity)
+  - Course Overview: overall_overview.md 
+  
+  # Grouping the Daily Lessons into Collapsible Week Sections
+  - Week 1:
+    - Overview: Week1_Overview.md
+    - Day 1: Week1_Day1.md
+    - Day 2: Week1_Day2.md
+    - Day 3: Week1_Day3.md
+    - Day 4: Week1_Day4.md
+    - Day 5: Week1_Day5.md
+  
+  - Week 2:
+    - Overview: Week2_Overview.md
+    - Day 6: Week2_Day6.md
+    - Day 7: Week2_Day7.md
+    - Day 8: Week2_Day8.md
+    - Day 9: Week2_Day9.md
+    - Day 10: Week2_Day10.md
+  
+  - Week 3:
+    - Overview: Week3_Overview.md
+    - Day 11: Week3_Day11.md
+    - Day 12: Week3_Day12.md
+    - Day 13: Week3_Day13.md
+    - Day 14: Week3_Day14.md
+    - Day 15: Week3_Day15.md
+
+  - Week 4:
+    - Overview: Week4_Overview.md
+    - Day 16: Week4_Day16.md
+    - Day 17: Week4_Day17.md
+    - Day 18: Week4_Day18.md
+    - Day 19: Week4_Day19.md
+    - Day 20: Week4_Day20.md
+
+  - Week 5:
+    - Overview: Week5_Overview.md
+    - Day 21: Week5_Day21.md
+    - Day 22: Week5_Day22.md
+    - Day 23: Week5_Day23.md
+    - Day 24: Week5_Day24.md
+    - Day 25: Week5_Day25.md
+  
+
+markdown_extensions:
+  - admonition
+  - codehilite
+  - toc:
+      permalink: true
+  - attr_list
