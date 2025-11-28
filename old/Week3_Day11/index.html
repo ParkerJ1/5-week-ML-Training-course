@@ -10,31 +10,27 @@
       
       
       
-        <link rel="canonical" href="https://parkerj1.github.io/ml-course/Week3_Day11/">
+        <link rel="canonical" href="https://parkerj1.github.io/ml-course/old/Week3_Day11/">
       
       
-        <link rel="prev" href="../Week3_Overview/">
-      
-      
-        <link rel="next" href="../Week3_Day12/">
       
       
         
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
     
     
       
-        <title>Day 11 - 5-Week Guided Machine Learning Training</title>
+        <title>Week 3, Day 11: CNN Theory - Convolutions, Filters, Feature Maps - 5-Week Guided Machine Learning Training</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -53,7 +49,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -94,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="5-Week Guided Machine Learning Training" class="md-header__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
+    <a href="../.." title="5-Week Guided Machine Learning Training" class="md-header__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Day 11
+              Week 3, Day 11: CNN Theory - Convolutions, Filters, Feature Maps
             
           </span>
         </div>
@@ -230,7 +226,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="5-Week Guided Machine Learning Training" class="md-nav__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
+    <a href="../.." title="5-Week Guided Machine Learning Training" class="md-nav__button md-logo" aria-label="5-Week Guided Machine Learning Training" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -260,7 +256,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -334,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Overview/" class="md-nav__link">
+      <a href="../../Week1_Overview/" class="md-nav__link">
         
   
   
@@ -362,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Day1/" class="md-nav__link">
+      <a href="../../Week1_Day1/" class="md-nav__link">
         
   
   
@@ -390,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Day2/" class="md-nav__link">
+      <a href="../../Week1_Day2/" class="md-nav__link">
         
   
   
@@ -418,7 +414,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Day3/" class="md-nav__link">
+      <a href="../../Week1_Day3/" class="md-nav__link">
         
   
   
@@ -446,7 +442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Day4/" class="md-nav__link">
+      <a href="../../Week1_Day4/" class="md-nav__link">
         
   
   
@@ -474,7 +470,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week1_Day5/" class="md-nav__link">
+      <a href="../../Week1_Day5/" class="md-nav__link">
         
   
   
@@ -556,7 +552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Overview/" class="md-nav__link">
+      <a href="../../Week2_Overview/" class="md-nav__link">
         
   
   
@@ -584,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Day6/" class="md-nav__link">
+      <a href="../../Week2_Day6/" class="md-nav__link">
         
   
   
@@ -612,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Day7/" class="md-nav__link">
+      <a href="../../Week2_Day7/" class="md-nav__link">
         
   
   
@@ -640,7 +636,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Day8/" class="md-nav__link">
+      <a href="../../Week2_Day8/" class="md-nav__link">
         
   
   
@@ -668,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Day9/" class="md-nav__link">
+      <a href="../../Week2_Day9/" class="md-nav__link">
         
   
   
@@ -696,7 +692,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week2_Day10/" class="md-nav__link">
+      <a href="../../Week2_Day10/" class="md-nav__link">
         
   
   
@@ -728,20 +724,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -762,7 +756,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -780,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week3_Overview/" class="md-nav__link">
+      <a href="../../Week3_Overview/" class="md-nav__link">
         
   
   
@@ -805,37 +799,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Day 11
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Week3_Day11/" class="md-nav__link">
         
   
   
@@ -851,265 +818,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#daily-goals" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Daily Goals
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#morning-session-4-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Morning Session (4 hours)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Morning Session (4 hours)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#optional-daily-check-in-with-peers-on-teams-15-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Optional: Daily Check-in with Peers on Teams (15 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#video-learning-2-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Video Learning (2 hours)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reference-material-30-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reference Material (30 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hands-on-coding-part-1-15-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hands-on Coding - Part 1 (1.5 hours)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hands-on Coding - Part 1 (1.5 hours)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#setup-10-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Setup (10 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-1-understanding-convolution-operation-45-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 1: Understanding Convolution Operation (45 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-2-common-image-filters-45-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 2: Common Image Filters (45 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-3-stride-and-padding-30-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 3: Stride and Padding (30 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#afternoon-session-4-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Afternoon Session (4 hours)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Afternoon Session (4 hours)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#video-learning-30-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Video Learning (30 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#hands-on-coding-part-2-35-hours" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Hands-on Coding - Part 2 (3.5 hours)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hands-on Coding - Part 2 (3.5 hours)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exercise-4-pooling-operations-40-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 4: Pooling Operations (40 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-5-first-cnn-in-pytorch-60-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 5: First CNN in PyTorch (60 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#exercise-6-visualizing-learned-features-50-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Exercise 6: Visualizing Learned Features (50 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mini-challenge-understanding-receptive-fields-40-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Mini-Challenge: Understanding Receptive Fields (40 min)
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#reflection-consolidation-30-min" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Reflection &amp; Consolidation (30 min)
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Reflection &amp; Consolidation (30 min)">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#daily-reflection-prompts-choose-2-3" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Daily Reflection Prompts (Choose 2-3):
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1122,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week3_Day12/" class="md-nav__link">
+      <a href="../../Week3_Day12/" class="md-nav__link">
         
   
   
@@ -1150,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week3_Day13/" class="md-nav__link">
+      <a href="../../Week3_Day13/" class="md-nav__link">
         
   
   
@@ -1178,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week3_Day14/" class="md-nav__link">
+      <a href="../../Week3_Day14/" class="md-nav__link">
         
   
   
@@ -1206,7 +914,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week3_Day15/" class="md-nav__link">
+      <a href="../../Week3_Day15/" class="md-nav__link">
         
   
   
@@ -1288,7 +996,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Overview/" class="md-nav__link">
+      <a href="../../Week4_Overview/" class="md-nav__link">
         
   
   
@@ -1316,7 +1024,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Day16/" class="md-nav__link">
+      <a href="../../Week4_Day16/" class="md-nav__link">
         
   
   
@@ -1344,7 +1052,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Day17/" class="md-nav__link">
+      <a href="../../Week4_Day17/" class="md-nav__link">
         
   
   
@@ -1372,7 +1080,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Day18/" class="md-nav__link">
+      <a href="../../Week4_Day18/" class="md-nav__link">
         
   
   
@@ -1400,7 +1108,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Day19/" class="md-nav__link">
+      <a href="../../Week4_Day19/" class="md-nav__link">
         
   
   
@@ -1428,7 +1136,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week4_Day20/" class="md-nav__link">
+      <a href="../../Week4_Day20/" class="md-nav__link">
         
   
   
@@ -1510,7 +1218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Overview/" class="md-nav__link">
+      <a href="../../Week5_Overview/" class="md-nav__link">
         
   
   
@@ -1538,7 +1246,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Day21/" class="md-nav__link">
+      <a href="../../Week5_Day21/" class="md-nav__link">
         
   
   
@@ -1566,7 +1274,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Day22/" class="md-nav__link">
+      <a href="../../Week5_Day22/" class="md-nav__link">
         
   
   
@@ -1594,7 +1302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Day23/" class="md-nav__link">
+      <a href="../../Week5_Day23/" class="md-nav__link">
         
   
   
@@ -1622,7 +1330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Day24/" class="md-nav__link">
+      <a href="../../Week5_Day24/" class="md-nav__link">
         
   
   
@@ -1650,7 +1358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week5_Day25/" class="md-nav__link">
+      <a href="../../Week5_Day25/" class="md-nav__link">
         
   
   
@@ -1732,7 +1440,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Overview/" class="md-nav__link">
+      <a href="../../Week6_Overview/" class="md-nav__link">
         
   
   
@@ -1760,7 +1468,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day26.md" class="md-nav__link">
+      <a href="../../Week6_Day26.md" class="md-nav__link">
         
   
   
@@ -1788,7 +1496,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day27.md" class="md-nav__link">
+      <a href="../../Week6_Day27.md" class="md-nav__link">
         
   
   
@@ -1816,7 +1524,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day28.md" class="md-nav__link">
+      <a href="../../Week6_Day28.md" class="md-nav__link">
         
   
   
@@ -1844,7 +1552,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day29.md" class="md-nav__link">
+      <a href="../../Week6_Day29.md" class="md-nav__link">
         
   
   
@@ -1872,7 +1580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day30.md" class="md-nav__link">
+      <a href="../../Week6_Day30.md" class="md-nav__link">
         
   
   
@@ -2381,7 +2089,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Manual convolution complete&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Manual convolution complete&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="exercise-2-common-image-filters-45-min">Exercise 2: Common Image Filters (45 min)<a class="headerlink" href="#exercise-2-common-image-filters-45-min" title="Permanent link">&para;</a></h4>
@@ -2462,7 +2170,7 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Image filters explored&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Image filters explored&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="exercise-3-stride-and-padding-30-min">Exercise 3: Stride and Padding (30 min)<a class="headerlink" href="#exercise-3-stride-and-padding-30-min" title="Permanent link">&para;</a></h4>
@@ -2582,13 +2290,16 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Effect of Padding&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Key Insights:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Stride &gt; 1: Downsamples the output (reduces spatial dimensions)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Padding: Preserves spatial dimensions and edge information&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- &#39;Same&#39; padding: Output size = Input size (when stride=1)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- &#39;Valid&#39; padding: No padding, output shrinks&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Stride and padding understood&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p><strong>Key Insights:</strong>
-- Stride &gt; 1: Downsamples the output (reduces spatial dimensions)
-- Padding: Preserves spatial dimensions and edge information
-- 'Same' padding: Output size = Input size (when stride=1)
-- 'Valid' padding: No padding, output shrinks</p>
 <hr />
 <h2 id="afternoon-session-4-hours">Afternoon Session (4 hours)<a class="headerlink" href="#afternoon-session-4-hours" title="Permanent link">&para;</a></h2>
 <h3 id="video-learning-30-min">Video Learning (30 min)<a class="headerlink" href="#video-learning-30-min" title="Permanent link">&para;</a></h3>
@@ -2696,13 +2407,16 @@
 <span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s1">&#39;Pooling Operations&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Key Differences:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Max Pool: Takes maximum value (preserves strong features)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Avg Pool: Takes average (smooths features)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Both reduce spatial dimensions → fewer parameters → faster&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Pooling provides translation invariance&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Pooling operations complete&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p><strong>Key Differences:</strong>
-- Max Pool: Takes maximum value (preserves strong features)
-- Avg Pool: Takes average (smooths features)
-- Both reduce spatial dimensions → fewer parameters → faster
-- Pooling provides translation invariance</p>
 <h4 id="exercise-5-first-cnn-in-pytorch-60-min">Exercise 5: First CNN in PyTorch (60 min)<a class="headerlink" href="#exercise-5-first-cnn-in-pytorch-60-min" title="Permanent link">&para;</a></h4>
 <p>Build a simple CNN for MNIST:</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
@@ -2867,16 +2581,16 @@
         <span class="n">correct</span> <span class="o">+=</span> <span class="p">(</span><span class="n">predicted</span> <span class="o">==</span> <span class="n">labels</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
 
 <span class="n">test_accuracy</span> <span class="o">=</span> <span class="n">correct</span> <span class="o">/</span> <span class="n">total</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Test Accuracy: </span><span class="si">{</span><span class="n">test_accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🎯 Test Accuracy: </span><span class="si">{</span><span class="n">test_accuracy</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
 <span class="c1"># Compare with Week 2&#39;s fully connected network</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Comparison with Week 2:&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-&quot;</span> <span class="o">*</span> <span class="mi">60</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Fully Connected (Week 2): ~95-96</span><span class="si">% a</span><span class="s2">ccuracy, ~500K parameters&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CNN (Week 3):             ~</span><span class="si">{</span><span class="n">test_accuracy</span><span class="o">*</span><span class="mi">100</span><span class="si">:</span><span class="s2">.1f</span><span class="si">}</span><span class="s2">% accuracy, </span><span class="si">{</span><span class="n">total_params</span><span class="si">:</span><span class="s2">,</span><span class="si">}</span><span class="s2"> parameters&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> CNNs achieve similar/better accuracy with MANY fewer parameters!&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 CNNs achieve similar/better accuracy with MANY fewer parameters!&quot;</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> First CNN complete&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ First CNN complete&quot;</span><span class="p">)</span>
 </code></pre></div>
 
 <h4 id="exercise-6-visualizing-learned-features-50-min">Exercise 6: Visualizing Learned Features (50 min)<a class="headerlink" href="#exercise-6-visualizing-learned-features-50-min" title="Permanent link">&para;</a></h4>
@@ -2972,12 +2686,15 @@
              <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">,</span> <span class="n">fontweight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Observations:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Early layers detect simple features (edges, curves)&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Deeper layers combine simple features into complex patterns&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Different filters activate for different patterns&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Feature visualization complete&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p><strong>Observations:</strong>
-- Early layers detect simple features (edges, curves)
-- Deeper layers combine simple features into complex patterns
-- Different filters activate for different patterns</p>
 <h4 id="mini-challenge-understanding-receptive-fields-40-min">Mini-Challenge: Understanding Receptive Fields (40 min)<a class="headerlink" href="#mini-challenge-understanding-receptive-fields-40-min" title="Permanent link">&para;</a></h4>
 <p>Explore what each neuron "sees":</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span><span class="o">*</span><span class="mi">70</span><span class="p">)</span>
@@ -3043,15 +2760,15 @@
 
 <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">💡 Key Insights:&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;- Each output neuron is influenced by a </span><span class="si">{</span><span class="n">rf</span><span class="si">}</span><span class="s2">×</span><span class="si">{</span><span class="n">rf</span><span class="si">}</span><span class="s2"> region of input&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- Deeper layers have larger receptive fields&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;- This is how CNNs capture hierarchical features&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✓ Receptive field analysis complete&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p><strong>Key Insights:</strong>
-- Receptive field grows with depth
-- Pooling increases receptive field size
-- Deeper networks 'see' larger contexts
-- Each output neuron is influenced by a {rf}×{rf} region of input
-- Deeper layers have larger receptive fields
-- This is how CNNs capture hierarchical features</p>
 <hr />
 <h2 id="reflection-consolidation-30-min">Reflection &amp; Consolidation (30 min)<a class="headerlink" href="#reflection-consolidation-30-min" title="Permanent link">&para;</a></h2>
 <p>☐ Review convolution operation thoroughly
@@ -3119,10 +2836,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
       
     
   </body>

@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day26/" class="md-nav__link">
+      <a href="../Week6_Day26.md" class="md-nav__link">
         
   
   
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day27/" class="md-nav__link">
+      <a href="../Week6_Day27.md" class="md-nav__link">
         
   
   
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day28/" class="md-nav__link">
+      <a href="../Week6_Day28.md" class="md-nav__link">
         
   
   
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day29/" class="md-nav__link">
+      <a href="../Week6_Day29.md" class="md-nav__link">
         
   
   
@@ -1950,7 +1950,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day30/" class="md-nav__link">
+      <a href="../Week6_Day30.md" class="md-nav__link">
         
   
   
@@ -2418,7 +2418,6 @@
 - Which skills do you want to strengthen? (Vision vs NLP vs Time Series)
 - Which type of data do you want in your portfolio?</p>
 <p><strong>Custom project?</strong> You can propose your own if you have a dataset and clear problem definition. Check with instructor first.</p>
-<p>☐ I choose Track: <strong><em>_</em></strong><strong><em>_</em></strong>___</p>
 <hr />
 <h3 id="project-planning-90-min">Project Planning (90 min)<a class="headerlink" href="#project-planning-90-min" title="Permanent link">&para;</a></h3>
 <p>Now that you've chosen, create your project plan. Use a text file or markdown document.</p>
@@ -2441,26 +2440,6 @@
 <span class="o">-</span><span class="w"> </span><span class="nv">Deliverables</span>:<span class="w"> </span>[<span class="nv">Working</span><span class="w"> </span><span class="nv">code</span>,<span class="w"> </span><span class="nv">trained</span><span class="w"> </span><span class="nv">model</span>,<span class="w"> </span><span class="nv">README</span>,<span class="w"> </span><span class="nv">results</span>]
 </code></pre></div>
 
-<p><strong>Example for Track 1</strong>:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">PROJECT</span><span class="o">:</span><span class="w"> </span><span class="n">Pneumonia</span><span class="w"> </span><span class="n">Detection</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">Chest</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">Rays</span>
-
-<span class="n">PROBLEM</span><span class="o">:</span><span class="w"> </span><span class="n">Binary</span><span class="w"> </span><span class="n">classification</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">chest</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">rays</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="n">Normal</span><span class="w"> </span><span class="n">or</span><span class="w"> </span><span class="n">Pneumonia</span>
-
-<span class="n">WHY</span><span class="w"> </span><span class="n">IT</span><span class="w"> </span><span class="n">MATTERS</span><span class="o">:</span><span class="w"> </span><span class="n">Early</span><span class="w"> </span><span class="n">pneumonia</span><span class="w"> </span><span class="n">detection</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">save</span><span class="w"> </span><span class="n">lives</span><span class="o">;</span><span class="w"> </span><span class="n">AI</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">assist</span><span class="w"> </span>
-<span class="n">radiologists</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">screening</span><span class="w"> </span><span class="n">large</span><span class="w"> </span><span class="n">volumes</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">rays</span>
-
-<span class="n">DATASET</span><span class="o">:</span><span class="w"> </span><span class="n">Chest</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">Ray</span><span class="w"> </span><span class="n">Images</span><span class="w"> </span><span class="o">(</span><span class="n">Pneumonia</span><span class="o">)</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">Kaggle</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Size</span><span class="o">:</span><span class="w"> </span><span class="o">~</span><span class="mi">5</span><span class="o">,</span><span class="mi">800</span><span class="w"> </span><span class="n">images</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Classes</span><span class="o">:</span><span class="w"> </span><span class="n">NORMAL</span><span class="w"> </span><span class="o">(</span><span class="mi">1</span><span class="o">,</span><span class="mi">583</span><span class="o">),</span><span class="w"> </span><span class="n">PNEUMONIA</span><span class="w"> </span><span class="o">(</span><span class="mi">4</span><span class="o">,</span><span class="mi">273</span><span class="o">)</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Features</span><span class="o">:</span><span class="w"> </span><span class="n">Grayscale</span><span class="w"> </span><span class="n">X</span><span class="o">-</span><span class="n">ray</span><span class="w"> </span><span class="n">images</span>
-
-<span class="n">SUCCESS</span><span class="w"> </span><span class="n">CRITERIA</span><span class="o">:</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Primary</span><span class="o">:</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">85</span><span class="o">%</span><span class="w"> </span><span class="n">accuracy</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">test</span><span class="w"> </span><span class="kd">set</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Secondary</span><span class="o">:</span><span class="w"> </span><span class="o">&gt;</span><span class="mi">90</span><span class="o">%</span><span class="w"> </span><span class="n">recall</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">pneumonia</span><span class="w"> </span><span class="o">(</span><span class="n">minimize</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="n">negatives</span><span class="o">)</span>
-<span class="o">-</span><span class="w"> </span><span class="n">Deliverables</span><span class="o">:</span><span class="w"> </span><span class="n">Trained</span><span class="w"> </span><span class="n">CNN</span><span class="w"> </span><span class="n">model</span><span class="o">,</span><span class="w"> </span><span class="n">confusion</span><span class="w"> </span><span class="n">matrix</span><span class="o">,</span><span class="w"> </span><span class="n">README</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">results</span>
-</code></pre></div>
-
-<p>☐ Project definition document created</p>
 <hr />
 <h4 id="2-technical-plan-30-min">2. Technical Plan (30 min)<a class="headerlink" href="#2-technical-plan-30-min" title="Permanent link">&para;</a></h4>
 <p>Outline your technical approach:</p>
@@ -2796,9 +2775,9 @@
 <span class="c1"># - Expected result: 50-55% accuracy (random is 50%!)</span>
 </code></pre></div>
 
-<p>☐ Baseline architecture documented
-☐ Training hyperparameters planned
-☐ Expected performance estimated</p>
+<p>☐ Baseline architecture documented<br />
+☐ Training hyperparameters planned<br />
+☐ Expected performance estimated  </p>
 <hr />
 <h3 id="daily-reflection-30-min">Daily Reflection (30 min)<a class="headerlink" href="#daily-reflection-30-min" title="Permanent link">&para;</a></h3>
 <p>Answer these questions in your project notes:</p>
@@ -2819,24 +2798,18 @@
 <p><strong>Questions</strong>: What do you need to clarify or learn more about?</p>
 </li>
 </ol>
-<p>☐ Reflection completed</p>
 <hr />
 <h2 id="end-of-day-21-checklist">End of Day 21 Checklist<a class="headerlink" href="#end-of-day-21-checklist" title="Permanent link">&para;</a></h2>
 <p>Before you finish today, verify you have:</p>
-<p>☐ Project track chosen
-☐ Project definition document written
+<p>☐ Project track chosen<br />
+☐ Project definition document written<br />
 ☐ Technical plan documented<br />
-☐ Milestone timeline created
-☐ Development environment set up
-☐ Dataset downloaded and verified
-☐ Data exploration notebook with visualizations
-☐ Baseline model architecture defined
-☐ Daily reflection completed</p>
-<p><strong>If you completed everything</strong>: Great! You're well-prepared for Day 22.</p>
-<p><strong>If you're behind</strong>: That's okay! Focus on getting the dataset downloaded and explored. You can finalize the baseline tomorrow morning.</p>
-<p><strong>Need help?</strong>: Post questions on Teams or bring them to Wednesday's check-in.</p>
-<hr />
-<p><strong>Tomorrow (Day 22)</strong>: You'll implement your data pipeline, train your baseline model, and get initial results!</p>
+☐ Milestone timeline created<br />
+☐ Development environment set up<br />
+☐ Dataset downloaded and verified<br />
+☐ Data exploration notebook with visualizations<br />
+☐ Baseline model architecture defined<br />
+☐ Daily reflection completed  </p>
 <hr />
 <h2 id="pro-tips">Pro Tips<a class="headerlink" href="#pro-tips" title="Permanent link">&para;</a></h2>
 <p>🎯 <strong>Scope management</strong>: If your dataset is huge, start with a subset (e.g., 20% of data) to iterate quickly. Scale up once things work.</p>

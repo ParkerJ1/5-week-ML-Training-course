@@ -1810,7 +1810,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day26/" class="md-nav__link">
+      <a href="../Week6_Day26.md" class="md-nav__link">
         
   
   
@@ -1838,7 +1838,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day27/" class="md-nav__link">
+      <a href="../Week6_Day27.md" class="md-nav__link">
         
   
   
@@ -1866,7 +1866,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day28/" class="md-nav__link">
+      <a href="../Week6_Day28.md" class="md-nav__link">
         
   
   
@@ -1894,7 +1894,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day29/" class="md-nav__link">
+      <a href="../Week6_Day29.md" class="md-nav__link">
         
   
   
@@ -1922,7 +1922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Week6_Day30/" class="md-nav__link">
+      <a href="../Week6_Day30.md" class="md-nav__link">
         
   
   
@@ -2458,10 +2458,10 @@
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </code></pre></div>
 
-<p>☐ Dataset class implemented
-☐ Transforms defined
-☐ Class imbalance handled
-☐ DataLoaders created
+<p>☐ Dataset class implemented<br />
+☐ Transforms defined<br />
+☐ Class imbalance handled<br />
+☐ DataLoaders created<br />
 ☐ Pipeline tested with visualizations</p>
 <hr />
 <h4 id="track-2-sentiment-specific-guidance">Track 2 (Sentiment) - Specific Guidance<a class="headerlink" href="#track-2-sentiment-specific-guidance" title="Permanent link">&para;</a></h4>
@@ -2557,11 +2557,11 @@
     <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Label: </span><span class="si">{</span><span class="s1">&#39;Positive&#39;</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">labels</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="mi">1</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;Negative&#39;</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </code></pre></div>
 
-<p>☐ Vocabulary class implemented
-☐ Tokenization working
-☐ Dataset class created
-☐ DataLoaders working
-☐ Sample reviews decoded successfully</p>
+<p>☐ Vocabulary class implemented<br />
+☐ Tokenization working<br />
+☐ Dataset class created<br />
+☐ DataLoaders working<br />
+☐ Sample reviews decoded successfully  </p>
 <hr />
 <h4 id="track-3-stock-price-specific-guidance">Track 3 (Stock Price) - Specific Guidance<a class="headerlink" href="#track-3-stock-price-specific-guidance" title="Permanent link">&para;</a></h4>
 <p><strong>Key considerations</strong>:
@@ -2660,10 +2660,10 @@
     <span class="k">pass</span>
 </code></pre></div>
 
-<p>☐ Technical indicators implemented
-☐ Labels created correctly
-☐ Time-based split implemented
-☐ Normalization applied correctly
+<p>☐ Technical indicators implemented<br />
+☐ Labels created correctly<br />
+☐ Time-based split implemented<br />
+☐ Normalization applied correctly<br />
 ☐ DataLoaders created</p>
 <hr />
 <h3 id="baseline-model-implementation-15-hours">Baseline Model Implementation (1.5 hours)<a class="headerlink" href="#baseline-model-implementation-15-hours" title="Permanent link">&para;</a></h3>
@@ -2697,8 +2697,8 @@
 - Don't forget <code>nn.Flatten()</code> before FC layers
 - Add <code>nn.Dropout(0.5)</code> before final layer
 - Calculate dimensions carefully after pooling</p>
-<p>☐ CNN architecture implemented
-☐ Forward pass working
+<p>☐ CNN architecture implemented<br />
+☐ Forward pass working<br />
 ☐ Output shape correct</p>
 <hr />
 <h4 id="track-2-text-simple-lstm">Track 2 (Text) - Simple LSTM<a class="headerlink" href="#track-2-text-simple-lstm" title="Permanent link">&para;</a></h4>
@@ -2721,8 +2721,8 @@
 - <code>nn.LSTM(embedding_dim, hidden_dim, batch_first=True)</code>
 - Take <code>hidden[-1]</code> from LSTM output (last hidden state)
 - <code>nn.Linear(hidden_dim, num_classes)</code></p>
-<p>☐ LSTM architecture implemented
-☐ Embedding layer working
+<p>☐ LSTM architecture implemented<br />
+☐ Embedding layer working<br />
 ☐ Last hidden state extracted correctly</p>
 <hr />
 <h4 id="track-3-stock-logistic-regression">Track 3 (Stock) - Logistic Regression<a class="headerlink" href="#track-3-stock-logistic-regression" title="Permanent link">&para;</a></h4>
@@ -2736,7 +2736,7 @@
 </code></pre></div>
 
 <p><strong>This is simple!</strong> Logistic regression is just one linear layer.</p>
-<p>☐ Model implemented
+<p>☐ Model implemented<br />
 ☐ Forward pass tested</p>
 <hr />
 <h2 id="afternoon-session-4-hours">Afternoon Session (4 hours)<a class="headerlink" href="#afternoon-session-4-hours" title="Permanent link">&para;</a></h2>
@@ -2858,8 +2858,8 @@
 - 50-100 epochs (simpler model)
 - lr=0.001 or 0.01
 - Don't expect high accuracy! 52-55% is good.</p>
-<p>☐ Training script implemented
-☐ Validation logic working
+<p>☐ Training script implemented<br />
+☐ Validation logic working<br />
 ☐ Best model saving implemented</p>
 <hr />
 <h3 id="train-baseline-model-15-hours">Train Baseline Model (1.5 hours)<a class="headerlink" href="#train-baseline-model-15-hours" title="Permanent link">&para;</a></h3>
@@ -2905,9 +2905,9 @@
 - Watch for overfitting (train acc &gt;&gt; val acc)
 - Check GPU utilization if using CUDA
 - Expect: 30 min - 2 hours depending on track and hardware</p>
-<p>☐ Baseline model training started
-☐ Training completing without errors
-☐ Loss decreasing over epochs
+<p>☐ Baseline model training started<br />
+☐ Training completing without errors<br />
+☐ Loss decreasing over epochs<br />
 ☐ Validation accuracy reasonable</p>
 <hr />
 <h3 id="analyze-initial-results-1-hour">Analyze Initial Results (1 hour)<a class="headerlink" href="#analyze-initial-results-1-hour" title="Permanent link">&para;</a></h3>
@@ -3009,9 +3009,9 @@
 <span class="mf">3.</span><span class="w"> </span><span class="p">[</span><span class="n">Idea</span><span class="w"> </span><span class="mi">3</span><span class="p">]</span>
 </code></pre></div>
 
-<p>☐ Training curves plotted
-☐ Test set evaluated
-☐ Confusion matrix created
+<p>☐ Training curves plotted<br />
+☐ Test set evaluated<br />
+☐ Confusion matrix created<br />
 ☐ Results documented</p>
 <hr />
 <h2 id="daily-reflection-30-min">Daily Reflection (30 min)<a class="headerlink" href="#daily-reflection-30-min" title="Permanent link">&para;</a></h2>
@@ -3033,18 +3033,17 @@
 <p><strong>Tomorrow's priorities</strong>: What will you try tomorrow to improve performance?</p>
 </li>
 </ol>
-<p>☐ Reflection completed</p>
 <hr />
 <h2 id="end-of-day-22-checklist">End of Day 22 Checklist<a class="headerlink" href="#end-of-day-22-checklist" title="Permanent link">&para;</a></h2>
-<p>☐ Data pipeline implemented and tested
-☐ DataLoaders working correctly
-☐ Baseline model implemented
-☐ Training script working
-☐ Baseline model trained successfully
-☐ Results analyzed and documented
-☐ Training curves look reasonable
-☐ Test accuracy documented
-☐ Ideas for improvement identified</p>
+<p>☐ Data pipeline implemented and tested<br />
+☐ DataLoaders working correctly<br />
+☐ Baseline model implemented<br />
+☐ Training script working<br />
+☐ Baseline model trained successfully<br />
+☐ Results analyzed and documented<br />
+☐ Training curves look reasonable<br />
+☐ Test accuracy documented<br />
+☐ Ideas for improvement identified  </p>
 <p><strong>Expected Results by Track</strong>:
 - <strong>Track 1</strong>: 70-85% accuracy (imbalanced dataset)
 - <strong>Track 2</strong>: 80-85% accuracy (balanced dataset)
@@ -3065,7 +3064,6 @@
 - <strong>Solution</strong>: Model might be predicting one class. Check class balance, try weighted loss</p>
 <p><strong>Issue</strong>: Perfect training accuracy but poor validation
 - <strong>Solution</strong>: Overfitting! Add regularization (dropout, weight decay), more data augmentation</p>
-<p>☐ Ready for Day 23!</p>
 
 
 
