@@ -46,6 +46,17 @@
 
 #### Exercise 1: Simple Attention Mechanism (50 min)
 
+
+**Attention Intuition:**
+- Traditional RNN: Fixed-size context vector for entire sequence
+- Attention: Dynamically focus on relevant parts of input
+- Query: What am I looking for?
+- Key: What do I offer?
+- Value: What do I actually contain?
+
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+
+
 ```python
 import torch
 import torch.nn as nn
@@ -57,17 +68,7 @@ print("="*70)
 print("EXERCISE 1: SIMPLE ATTENTION MECHANISM")
 print("="*70)
 
-print("""
-Attention Intuition:
-- Traditional RNN: Fixed-size context vector for entire sequence
-- Attention: Dynamically focus on relevant parts of input
-- Query: What am I looking for?
-- Key: What do I offer?
-- Value: What do I actually contain?
-
-Attention(Q, K, V) = softmax(QK^T / √d_k) V
-""")
-
+# Focus on this method
 def simple_attention(query, keys, values):
     """
     Simple attention mechanism
@@ -144,8 +145,8 @@ for i, weight in enumerate(weights):
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Attention allows dynamic focus on relevant information!")
-print("\n✓ Exercise 1 complete")
+print("\n Attention allows dynamic focus on relevant information!")
+print("\n Exercise 1 complete")
 ```
 
 #### Exercise 2: Scaled Dot-Product Attention (50 min)
@@ -241,27 +242,27 @@ for batch_idx in range(2):
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Each position can attend to all other positions!")
-print("\n✓ Exercise 2 complete")
+print("\n Each position can attend to all other positions!")
+print("\n Exercise 2 complete")
 ```
 
 #### Exercise 3: Multi-Head Attention (60 min)
 
-```python
-print("\n" + "="*70)
-print("EXERCISE 3: MULTI-HEAD ATTENTION")
-print("="*70)
-
-print("""
-Multi-Head Attention:
+**Multi-Head Attention:**
 - Instead of single attention, use multiple "heads"
 - Each head learns different aspects/relationships
 - Heads computed in parallel
 - Outputs concatenated and projected
 
-MultiHead(Q, K, V) = Concat(head_1, ..., head_h) W^O
-where head_i = Attention(QW^Q_i, KW^K_i, VW^V_i)
-""")
+$$\text{MultiHead}(Q, K, V) = \text{Concat}(\text{head}_1, \dots, \text{head}_h)W^O$$
+where
+
+$$\text{head}_i = \text{Attention}(QW_i^Q, KW_i^K, VW_i^V)$$
+
+```python
+print("\n" + "="*70)
+print("EXERCISE 3: MULTI-HEAD ATTENTION")
+print("="*70)
 
 class MultiHeadAttention(nn.Module):
     def __init__(self, d_model, num_heads):
@@ -359,8 +360,8 @@ plt.suptitle('Multi-Head Attention Patterns', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Different heads learn different patterns!")
-print("\n✓ Exercise 3 complete")
+print("\n Different heads learn different patterns!")
+print("\n Exercise 3 complete")
 ```
 
 ---
@@ -371,20 +372,16 @@ print("\n✓ Exercise 3 complete")
 
 #### Exercise 4: Position Encodings (40 min)
 
+
+**Position Encodings:**
+- Transformers have no recurrence → no inherent position info!
+- Add positional information to embeddings
+- Use sine/cosine functions of different frequencies
+
 ```python
 print("\n" + "="*70)
 print("EXERCISE 4: POSITION ENCODINGS")
 print("="*70)
-
-print("""
-Position Encodings:
-- Transformers have no recurrence → no inherent position info
-- Add positional information to embeddings
-- Use sine/cosine functions of different frequencies
-
-PE(pos, 2i) = sin(pos / 10000^(2i/d_model))
-PE(pos, 2i+1) = cos(pos / 10000^(2i/d_model))
-""")
 
 def get_positional_encoding(seq_len, d_model):
     """Generate positional encodings"""
@@ -437,10 +434,10 @@ axes[2].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Position encodings are unique for each position!")
+print("\n Position encodings are unique for each position!")
 print("   Sine/cosine allow the model to learn relative positions")
 
-print("\n✓ Exercise 4 complete")
+print("\n Exercise 4 complete")
 ```
 
 #### Exercise 5: Simple Transformer Block (70 min)
@@ -537,8 +534,8 @@ plt.colorbar(im, ax=ax)
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Transformer encoder allows each position to attend to all positions!")
-print("\n✓ Exercise 5 complete")
+print("\n Transformer encoder allows each position to attend to all positions!")
+print("\n Exercise 5 complete")
 ```
 
 #### Mini-Challenge: Sequence Classification with Transformer (70 min)
@@ -684,20 +681,20 @@ with torch.no_grad():
         conf = torch.softmax(output, dim=1)[0, pred].item()
         print(f"  '{sent}' → {label} ({conf:.4f})")
 
-print("\n🎉 Transformer classifier complete!")
-print("💡 This is a simplified version of BERT's architecture!")
+print("\n Transformer classifier complete!")
+print(" This is a simplified version of BERT's architecture!")
 
-print("\n✓ Mini-challenge complete")
+print("\n Mini-challenge complete")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review attention mechanism thoroughly
-☐ Understand Transformer architecture
-☐ Connect to modern LLMs
-☐ Write daily reflection
+☐ Review attention mechanism thoroughly  
+☐ Understand Transformer architecture  
+☐ Connect to modern LLMs  
+☐ Write daily reflection  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

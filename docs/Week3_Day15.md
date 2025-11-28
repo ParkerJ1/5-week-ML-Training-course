@@ -22,33 +22,33 @@
 
 ### Project Briefing (30 min)
 
-```python
-"""
-CIFAR-10 IMAGE CLASSIFICATION PROJECT
 
-Dataset: CIFAR-10
+**CIFAR-10 IMAGE CLASSIFICATION PROJECT**
+
+*Dataset: CIFAR-10*
 - 60,000 color images (32×32 RGB)
 - 10 classes: plane, car, bird, cat, deer, dog, frog, horse, ship, truck
 - 50,000 training, 10,000 test
 - More challenging than MNIST!
 
-Goal: Build CNN achieving >85% accuracy (target: >90%)
+**Goal**: Build CNN achieving >85% accuracy (target: >90%)
 
-Project Structure:
-Phase 1: Data Exploration (30 min)
-Phase 2: Baseline Model (45 min)  
-Phase 3: Improved Architecture (60 min)
-Phase 4: Transfer Learning (60 min)
-Phase 5: Analysis & Documentation (45 min)
+**Project Structure:**  
+- Phase 1: Data Exploration (30 min)  
+- Phase 2: Baseline Model (45 min)    
+- Phase 3: Improved Architecture (60 min)  
+- Phase 4: Transfer Learning (60 min)  
+- Phase 5: Analysis & Documentation (45 min)  
 
-Success Criteria:
+**Success Criteria:**
 - Minimum: >70% test accuracy
 - Target: >85% test accuracy
 - Stretch: >90% test accuracy
 - Professional documentation
 - Clear visualizations
-"""
 
+
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -134,7 +134,7 @@ print(f"\nClass distribution (perfectly balanced):")
 for cls_idx, count in zip(unique, counts):
     print(f"  {classes[cls_idx]:8s}: {count} samples")
 
-print("\n✓ Data exploration complete")
+print("\n Data exploration complete")
 ```
 
 ---
@@ -265,9 +265,9 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 baseline_acc = correct / total
-print(f"\n🎯 Baseline Test Accuracy: {baseline_acc:.4f}")
+print(f"\n Baseline Test Accuracy: {baseline_acc:.4f}")
 
-print("\n✓ Baseline model complete")
+print("\n Baseline model complete")
 ```
 
 ---
@@ -371,9 +371,9 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 improved_acc = correct / total
-print(f"\n🎯 Improved Test Accuracy: {improved_acc:.4f}")
+print(f"\n Improved Test Accuracy: {improved_acc:.4f}")
 
-print("\n✓ Improved architecture complete")
+print("\n Improved architecture complete")
 ```
 
 ## Phase 4: Transfer Learning (60 min)
@@ -477,9 +477,9 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 resnet_acc = correct / total
-print(f"\n🎯 ResNet-18 Test Accuracy: {resnet_acc:.4f}")
+print(f"\n ResNet-18 Test Accuracy: {resnet_acc:.4f}")
 
-print("\n✓ Transfer learning complete")
+print("\n Transfer learning complete")
 ```
 
 ## Phase 5: Analysis & Documentation (45 min)
@@ -621,7 +621,7 @@ plt.suptitle('Misclassified Examples', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-# Final report
+# Final report - this is printed to the screen and exported as a text file
 report = f"""
 {'='*70}
 CIFAR-10 PROJECT FINAL REPORT
@@ -656,8 +656,8 @@ MODELS EVALUATED
    - Improvement: +{(resnet_acc-baseline_acc):.4f}
 
 BEST MODEL: ResNet-18 Transfer Learning
-Status: {'✓ TARGET ACHIEVED (>85%)' if resnet_acc > 0.85 else '✗ Below target'}
-        {'🎉 STRETCH GOAL (>90%)!' if resnet_acc > 0.90 else ''}
+Status: {' TARGET ACHIEVED (>85%)' if resnet_acc > 0.85 else ' Below target'}
+        {' STRETCH GOAL (>90%)!' if resnet_acc > 0.90 else ''}
 
 KEY INSIGHTS
 ------------
@@ -668,20 +668,20 @@ KEY INSIGHTS
 
 TECHNIQUES APPLIED
 ------------------
-✓ Custom CNN architectures
-✓ Batch normalization
-✓ Dropout regularization
-✓ Data augmentation
-✓ Transfer learning
-✓ Learning rate scheduling
-✓ Early stopping
+ Custom CNN architectures
+ Batch normalization
+ Dropout regularization
+ Data augmentation
+ Transfer learning
+ Learning rate scheduling
+ Early stopping
 
 {'='*70}
-Week 3 Complete! 🎉
+Week 3 Complete! 
 {'='*70}
 """
 
-print(report)
+print(report) 
 
 # Save report
 with open('cifar10_project_report.txt', 'w') as f:
@@ -690,16 +690,26 @@ with open('cifar10_project_report.txt', 'w') as f:
 print("\n📄 Report saved: cifar10_project_report.txt")
 print("💾 Model saved: best_cifar10_resnet.pth")
 
-print("\n✓ Project complete!")
+print("\n Project complete!")
 ```
+**KEY INSIGHTS**
+
+1. Data augmentation critical for CIFAR-10
+2. Batch normalization stabilizes training
+3. Transfer learning provides major boost
+4. Depth matters but skip connections help
+
+**TECHNIQUES APPLIED**  
+ - Custom CNN architectures  
+ - Batch normalization  
+ - Dropout regularization  
+ - Data augmentation  
+ - Transfer learning  
+ - Learning rate scheduling  
+ - Early stopping  
+
 
 ---
-
-## Reflection & Week Review (30 min)
-
-☐ Review entire Week 3 journey
-☐ Document key learnings
-☐ Celebrate achievements
 
 ### Week 3 Reflection Prompts (Address All):
 
@@ -713,25 +723,25 @@ print("\n✓ Project complete!")
 
 ### Week 3 Achievement Checklist:
 
-☐ Understood convolutions and their advantages
-☐ Implemented CNNs from scratch
-☐ Built LeNet, AlexNet, VGG, ResNet
-☐ Mastered transfer learning
-☐ Applied data augmentation effectively
-☐ Completed CIFAR-10 project with >85% accuracy
-☐ Created professional documentation
-☐ Built portfolio-ready CV project
+☐ Understood convolutions and their advantages  
+☐ Implemented CNNs from scratch  
+☐ Built LeNet, AlexNet, VGG, ResNet  
+☐ Mastered transfer learning  
+☐ Applied data augmentation effectively  
+☐ Completed CIFAR-10 project with >85% accuracy  
+☐ Created professional documentation  
+☐ Built portfolio-ready CV project  
 
 ---
 
-## 🎉 Week 3 Complete!
+##  Week 3 Complete!
 
 **Achievements Unlocked:**
-- ✅ CNN fundamentals mastered
-- ✅ Classic and modern architectures
-- ✅ Transfer learning proficiency
-- ✅ Production CV skills
-- ✅ CIFAR-10 portfolio project
+-  CNN fundamentals mastered
+-  Classic and modern architectures
+-  Transfer learning proficiency
+-  Production CV skills
+-  CIFAR-10 portfolio project
 
 **What You Can Now Do:**
 - Build CNNs for any image classification task
@@ -745,6 +755,6 @@ Week 4 covers advanced topics: RNNs, LSTMs, Transformers, and GANs!
 
 ---
 
-**Congratulations on completing Week 3!** 🚀
+**Congratulations on completing Week 3!** 
 
 You now have solid computer vision skills and a portfolio project to show for it.

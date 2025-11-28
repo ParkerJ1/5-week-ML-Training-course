@@ -39,6 +39,25 @@
 
 ### Hands-on Coding - Part 1 (2 hours)
 
+**Transfer Learning Strategy:**
+1. Load pretrained model (learned features from ImageNet)
+2. Replace final layer (for new task)
+3. Choose: freeze backbone OR fine-tune all layers
+
+**When to use which:**  
+**Feature Extraction:**
+  - Faster training (fewer parameters)
+  - Less risk of overfitting (frozen weights)  
+*BUT...*
+  - Limited adaptation to new domain  
+
+**Fine-Tuning:**
+  - Better adaptation to new domain
+  - Can achieve higher accuracy  
+  *BUT...*
+  - Requires more data to avoid overfitting
+  - Slower training
+
 ```python
 import torch
 import torch.nn as nn
@@ -80,11 +99,6 @@ num_features = resnet_pretrained.fc.in_features
 resnet_pretrained.fc = nn.Linear(num_features, 10)
 print(f"\nModified classifier (for 10 classes):")
 print(resnet_pretrained.fc)
-
-print("\n💡 Transfer Learning Strategy:")
-print("1. Load pretrained model (learned features from ImageNet)")
-print("2. Replace final layer (for new task)")
-print("3. Choose: freeze backbone OR fine-tune all layers")
 
 #### Exercise 2: Feature Extraction vs Fine-Tuning (50 min)
 
@@ -242,16 +256,7 @@ print(f"\nFinal validation accuracy:")
 print(f"  Feature Extraction: {history_extract['val_acc'][-1]:.4f}")
 print(f"  Fine-Tuning: {history_finetune['val_acc'][-1]:.4f}")
 
-print("\n💡 When to use which:")
-print("Feature Extraction:")
-print("  + Faster training (fewer parameters)")
-print("  + Less risk of overfitting (frozen weights)")
-print("  - Limited adaptation to new domain")
-print("\nFine-Tuning:")
-print("  + Better adaptation to new domain")
-print("  + Can achieve higher accuracy")
-print("  - Requires more data to avoid overfitting")
-print("  - Slower training")
+
 
 #### Exercise 3: Data Augmentation (45 min)
 
@@ -370,7 +375,7 @@ print(f"  Without augmentation: {history_no_aug['val_acc'][-1]:.4f}")
 print(f"  With augmentation: {history_with_aug['val_acc'][-1]:.4f}")
 print(f"  Improvement: {history_with_aug['val_acc'][-1] - history_no_aug['val_acc'][-1]:.4f}")
 
-print("\n✓ Exercises 1-3 complete")
+print("\n Exercises 1-3 complete")
 ```
 
 ---
@@ -379,13 +384,7 @@ print("\n✓ Exercises 1-3 complete")
 
 ### Mini-Challenge: Complete Transfer Learning Pipeline (3.5 hours)
 
-```python
-print("\n\n" + "="*70)
-print("MINI-CHALLENGE: COMPLETE TRANSFER LEARNING PROJECT")
-print("="*70)
-
-print("""
-Your challenge: Build the best possible model for CIFAR-10
+**Your challenge:** Build the best possible model for CIFAR-10
 
 Steps:
 1. Design augmentation strategy
@@ -394,8 +393,16 @@ Steps:
 4. Train and evaluate
 5. Document your choices
 
-Target: >90% accuracy on CIFAR-10
-""")
+**Target:** >90% accuracy on CIFAR-10
+
+
+
+```python
+print("\n\n" + "="*70)
+print("MINI-CHALLENGE: COMPLETE TRANSFER LEARNING PROJECT")
+print("="*70)
+
+
 
 # Load CIFAR-10
 print("\nLoading CIFAR-10 (color images, 10 classes)...")
@@ -569,18 +576,18 @@ axes[1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n🎉 Challenge complete!")
-print("\n✓ All Day 14 exercises complete")
+print("\n Challenge complete!")
+print("\n All Day 14 exercises complete")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review transfer learning concepts
-☐ Understand when to freeze vs fine-tune
-☐ Document augmentation strategies
-☐ Write daily reflection
+☐ Review transfer learning concepts  
+☐ Understand when to freeze vs fine-tune  
+☐ Document augmentation strategies  
+☐ Write daily reflection  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

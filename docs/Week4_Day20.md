@@ -22,32 +22,32 @@
 
 ### Project Briefing (30 min)
 
-```python
-"""
-SENTIMENT ANALYSIS PROJECT
+**SENTIMENT ANALYSIS PROJECT**
 
-Dataset: IMDB Movie Reviews
+**Dataset:** IMDB Movie Reviews
 - 50,000 reviews (25,000 train, 25,000 test)
 - Binary classification: Positive (1) or Negative (0)
 - Real text data with variety and complexity
 
-Goal: Build sentiment classifier achieving >85% accuracy
+**Goal:** Build sentiment classifier achieving >85% accuracy
 
-Project Structure:
-Phase 1: Data Loading & Exploration (30 min)
-Phase 2: Text Preprocessing Pipeline (45 min)
-Phase 3: Baseline Model (45 min)
-Phase 4: Advanced Model with Attention (60 min)
-Phase 5: Evaluation & Documentation (45 min)
+**Project Structure:**  
+Phase 1: Data Loading & Exploration (30 min)  
+Phase 2: Text Preprocessing Pipeline (45 min)  
+Phase 3: Baseline Model (45 min)  
+Phase 4: Advanced Model with Attention (60 min)  
+Phase 5: Evaluation & Documentation (45 min)  
 
-Success Criteria:
+**Success Criteria:**
 - Minimum: >80% test accuracy
 - Target: >85% test accuracy
 - Stretch: >88% test accuracy
 - Clean, documented code
 - Professional visualizations
-"""
 
+## Phase 1: Data Loading & Exploration (30 min)
+
+```python
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -62,17 +62,6 @@ import seaborn as sns
 torch.manual_seed(42)
 np.random.seed(42)
 
-print("="*70)
-print("SENTIMENT ANALYSIS PROJECT")
-print("Week 4, Day 20 Capstone")
-print("="*70)
-```
-
----
-
-## Phase 1: Data Loading & Exploration (30 min)
-
-```python
 print("\n" + "="*70)
 print("PHASE 1: DATA LOADING & EXPLORATION")
 print("="*70)
@@ -145,7 +134,7 @@ print(f"  Mean: {np.mean(train_lengths):.1f}")
 print(f"  Median: {np.median(train_lengths):.1f}")
 print(f"  Max: {max(train_lengths)}")
 
-print("\n✓ Phase 1 complete")
+print("\n Phase 1 complete")
 ```
 
 ---
@@ -251,7 +240,7 @@ print(f"Original: '{example_text}'")
 print(f"Tokens: {[preprocessor.idx_to_word[idx] for idx in example_sequence[:20]]}")
 print(f"Indices: {example_sequence[:20]}")
 
-print("\n✓ Phase 2 complete")
+print("\n Phase 2 complete")
 ```
 
 ---
@@ -374,9 +363,9 @@ def train_model(model, train_loader, test_loader, epochs=10, lr=0.001):
 print("\nTraining baseline model...")
 baseline_history, baseline_best_acc = train_model(baseline_model, train_loader, test_loader, epochs=10)
 
-print(f"\n🎯 Baseline Best Test Accuracy: {baseline_best_acc:.4f}")
+print(f"\n Baseline Best Test Accuracy: {baseline_best_acc:.4f}")
 
-print("\n✓ Phase 3 complete")
+print("\n Phase 3 complete")
 ```
 
 ## Phase 4: Advanced Model with Attention (60 min)
@@ -500,13 +489,28 @@ def train_attention_model(model, train_loader, test_loader, epochs=10, lr=0.001)
 print("\nTraining attention model...")
 attention_history, attention_best_acc = train_attention_model(attention_model, train_loader, test_loader, epochs=10)
 
-print(f"\n🎯 Attention Model Best Test Accuracy: {attention_best_acc:.4f}")
+print(f"\n Attention Model Best Test Accuracy: {attention_best_acc:.4f}")
 print(f"Improvement over baseline: +{(attention_best_acc - baseline_best_acc):.4f}")
 
-print("\n✓ Phase 4 complete")
+print("\n Phase 4 complete")
 ```
 
-## Phase 5: Evaluation & Documentation (45 min)
+## Phase 5: Evaluation & Documentation (45 min)  
+
+**KEY INSIGHTS**
+1. Attention mechanism improves accuracy
+2. Model focuses on sentiment-heavy words
+3. Bidirectional LSTM could improve further
+4. Pretrained embeddings (GloVe) could help
+
+**TECHNIQUES APPLIED**
+- Text preprocessing pipeline
+- Custom vocabulary building
+- LSTM for sequential modeling
+- Attention mechanism
+- Proper train/test splitting
+- Model checkpointing
+
 
 ```python
 print("\n" + "="*70)
@@ -613,7 +617,7 @@ for sample_text in test_samples:
         bar = "█" * int(weight * 50)
         print(f"  {word:15s}: {weight:.4f} {bar}")
 
-# Final report
+# Final report - to be printed to the screen and saved to txt file
 report = f"""
 {'='*70}
 SENTIMENT ANALYSIS PROJECT - FINAL REPORT
@@ -640,7 +644,7 @@ MODELS EVALUATED
    - Improvement: +{(attention_best_acc - baseline_best_acc):.4f}
 
 BEST MODEL: LSTM with Attention
-Status: {'✓ TARGET ACHIEVED (>85%)' if attention_best_acc > 0.85 else '✗ Below target'}
+Status: {' TARGET ACHIEVED (>85%)' if attention_best_acc > 0.85 else ' Below target'}
 
 KEY INSIGHTS
 ------------
@@ -651,15 +655,15 @@ KEY INSIGHTS
 
 TECHNIQUES APPLIED
 ------------------
-✓ Text preprocessing pipeline
-✓ Custom vocabulary building
-✓ LSTM for sequential modeling
-✓ Attention mechanism
-✓ Proper train/test splitting
-✓ Model checkpointing
+ Text preprocessing pipeline
+ Custom vocabulary building
+ LSTM for sequential modeling
+ Attention mechanism
+ Proper train/test splitting
+ Model checkpointing
 
 {'='*70}
-Week 4 Complete! 🎉
+Week 4 Complete! 
 {'='*70}
 """
 
@@ -672,16 +676,10 @@ with open('sentiment_analysis_report.txt', 'w') as f:
 print("\n📄 Report saved: sentiment_analysis_report.txt")
 print("💾 Models saved: best_sentiment_model.pth, best_attention_model.pth")
 
-print("\n✓ Project complete!")
+print("\n Project complete!")
 ```
 
 ---
-
-## Reflection & Week Review (30 min)
-
-☐ Review entire Week 4 journey
-☐ Document key learnings
-☐ Celebrate achievements
 
 ### Week 4 Reflection Prompts (Address All):
 
@@ -695,25 +693,25 @@ print("\n✓ Project complete!")
 
 ### Week 4 Achievement Checklist:
 
-☐ Understood RNNs and LSTMs
-☐ Implemented attention mechanism
-☐ Grasped Transformer architecture conceptually
-☐ Processed text data for NLP
-☐ Built and trained GANs
-☐ Completed sentiment analysis project >85% accuracy
-☐ Created professional documentation
+☐ Understood RNNs and LSTMs  
+☐ Implemented attention mechanism  
+☐ Grasped Transformer architecture conceptually  
+☐ Processed text data for NLP  
+☐ Built and trained GANs  
+☐ Completed sentiment analysis project >85% accuracy  
+☐ Created professional documentation  
 
 ---
 
-## 🎉 Week 4 Complete!
+##  Week 4 Complete!
 
 **Achievements Unlocked:**
-- ✅ Sequential modeling with RNNs/LSTMs
-- ✅ Attention mechanisms understood
-- ✅ Transformer architecture grasped
-- ✅ NLP pipeline mastery
-- ✅ Generative modeling with GANs
-- ✅ Portfolio sentiment analysis project
+-  Sequential modeling with RNNs/LSTMs
+-  Attention mechanisms understood
+-  Transformer architecture grasped
+-  NLP pipeline mastery
+-  Generative modeling with GANs
+-  Portfolio sentiment analysis project
 
 **What You Can Now Do:**
 - Build sequence models for text and time series
@@ -723,7 +721,7 @@ print("\n✓ Project complete!")
 - Deploy sentiment classifiers
 - Understand the foundations of ChatGPT/GPT-4
 
-**Congratulations on completing Week 4!** 🚀
+**Congratulations on completing Week 4!** 
 
 You've mastered advanced deep learning topics and built impressive projects!
 

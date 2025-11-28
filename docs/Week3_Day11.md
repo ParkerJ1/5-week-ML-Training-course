@@ -219,7 +219,7 @@ plt.suptitle('2D Convolution Step-by-Step', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-print("\n✓ Manual convolution complete")
+print("\n Manual convolution complete")
 ```
 
 #### Exercise 2: Common Image Filters (45 min)
@@ -303,7 +303,7 @@ plt.suptitle('Common Image Filters', fontsize=16, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-print("\n✓ Image filters explored")
+print("\n Image filters explored")
 ```
 
 #### Exercise 3: Stride and Padding (30 min)
@@ -427,14 +427,13 @@ plt.suptitle('Effect of Padding', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key Insights:")
-print("- Stride > 1: Downsamples the output (reduces spatial dimensions)")
-print("- Padding: Preserves spatial dimensions and edge information")
-print("- 'Same' padding: Output size = Input size (when stride=1)")
-print("- 'Valid' padding: No padding, output shrinks")
 
-print("\n✓ Stride and padding understood")
 ```
+**Key Insights:**
+- Stride > 1: Downsamples the output (reduces spatial dimensions)
+- Padding: Preserves spatial dimensions and edge information
+- 'Same' padding: Output size = Input size (when stride=1)
+- 'Valid' padding: No padding, output shrinks
 
 ---
 
@@ -552,15 +551,13 @@ plt.colorbar(im2, ax=axes[2])
 plt.suptitle('Pooling Operations', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
-
-print("\n💡 Key Differences:")
-print("- Max Pool: Takes maximum value (preserves strong features)")
-print("- Avg Pool: Takes average (smooths features)")
-print("- Both reduce spatial dimensions → fewer parameters → faster")
-print("- Pooling provides translation invariance")
-
-print("\n✓ Pooling operations complete")
 ```
+
+**Key Differences:**
+- Max Pool: Takes maximum value (preserves strong features)
+- Avg Pool: Takes average (smooths features)
+- Both reduce spatial dimensions → fewer parameters → faster
+- Pooling provides translation invariance
 
 #### Exercise 5: First CNN in PyTorch (60 min)
 
@@ -729,16 +726,16 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 test_accuracy = correct / total
-print(f"\n🎯 Test Accuracy: {test_accuracy:.4f}")
+print(f"\n Test Accuracy: {test_accuracy:.4f}")
 
 # Compare with Week 2's fully connected network
 print("\nComparison with Week 2:")
 print("-" * 60)
 print("Fully Connected (Week 2): ~95-96% accuracy, ~500K parameters")
 print(f"CNN (Week 3):             ~{test_accuracy*100:.1f}% accuracy, {total_params:,} parameters")
-print("\n💡 CNNs achieve similar/better accuracy with MANY fewer parameters!")
+print("\n CNNs achieve similar/better accuracy with MANY fewer parameters!")
 
-print("\n✓ First CNN complete")
+print("\n First CNN complete")
 ```
 
 #### Exercise 6: Visualizing Learned Features (50 min)
@@ -838,13 +835,13 @@ plt.suptitle(f'Conv2 Feature Maps (Deeper features)',
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Observations:")
-print("- Early layers detect simple features (edges, curves)")
-print("- Deeper layers combine simple features into complex patterns")
-print("- Different filters activate for different patterns")
 
-print("\n✓ Feature visualization complete")
 ```
+
+**Observations:**
+- Early layers detect simple features (edges, curves)
+- Deeper layers combine simple features into complex patterns
+- Different filters activate for different patterns
 
 #### Mini-Challenge: Understanding Receptive Fields (40 min)
 
@@ -915,13 +912,15 @@ ax.set_ylabel('Height (pixels)')
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key Insights:")
-print(f"- Each output neuron is influenced by a {rf}×{rf} region of input")
-print("- Deeper layers have larger receptive fields")
-print("- This is how CNNs capture hierarchical features")
-
-print("\n✓ Receptive field analysis complete")
 ```
+
+**Key Insights:**
+- Receptive field grows with depth
+- Pooling increases receptive field size
+- Deeper networks 'see' larger contexts
+- Each output neuron is influenced by a {rf}×{rf} region of input
+- Deeper layers have larger receptive fields
+- This is how CNNs capture hierarchical features
 
 ---
 

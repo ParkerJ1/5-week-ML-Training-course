@@ -185,10 +185,10 @@ if __name__ == "__main__":
     plt.show()
 ```
 
-☐ Dataset class implemented
-☐ Transforms defined
-☐ Class imbalance handled
-☐ DataLoaders created
+☐ Dataset class implemented  
+☐ Transforms defined  
+☐ Class imbalance handled  
+☐ DataLoaders created  
 ☐ Pipeline tested with visualizations
 
 ---
@@ -285,11 +285,11 @@ if __name__ == "__main__":
     print(f"Label: {'Positive' if labels[0]==1 else 'Negative'}")
 ```
 
-☐ Vocabulary class implemented
-☐ Tokenization working
-☐ Dataset class created
-☐ DataLoaders working
-☐ Sample reviews decoded successfully
+☐ Vocabulary class implemented  
+☐ Tokenization working  
+☐ Dataset class created  
+☐ DataLoaders working  
+☐ Sample reviews decoded successfully  
 
 ---
 
@@ -390,10 +390,10 @@ def create_dataloaders(csv_path, batch_size=256):
     pass
 ```
 
-☐ Technical indicators implemented
-☐ Labels created correctly
-☐ Time-based split implemented
-☐ Normalization applied correctly
+☐ Technical indicators implemented  
+☐ Labels created correctly  
+☐ Time-based split implemented  
+☐ Normalization applied correctly  
 ☐ DataLoaders created
 
 ---
@@ -434,8 +434,8 @@ if __name__ == "__main__":
 - Add `nn.Dropout(0.5)` before final layer
 - Calculate dimensions carefully after pooling
 
-☐ CNN architecture implemented
-☐ Forward pass working
+☐ CNN architecture implemented  
+☐ Forward pass working  
 ☐ Output shape correct
 
 ---
@@ -463,8 +463,8 @@ class BaselineLSTM(nn.Module):
 - Take `hidden[-1]` from LSTM output (last hidden state)
 - `nn.Linear(hidden_dim, num_classes)`
 
-☐ LSTM architecture implemented
-☐ Embedding layer working
+☐ LSTM architecture implemented  
+☐ Embedding layer working  
 ☐ Last hidden state extracted correctly
 
 ---
@@ -483,7 +483,7 @@ class BaselineLogistic(nn.Module):
 
 **This is simple!** Logistic regression is just one linear layer.
 
-☐ Model implemented
+☐ Model implemented  
 ☐ Forward pass tested
 
 ---
@@ -614,8 +614,8 @@ torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=5.0)
 - lr=0.001 or 0.01
 - Don't expect high accuracy! 52-55% is good.
 
-☐ Training script implemented
-☐ Validation logic working
+☐ Training script implemented  
+☐ Validation logic working  
 ☐ Best model saving implemented
 
 ---
@@ -667,9 +667,9 @@ print(f"Best validation accuracy: {max(history['val_acc']):.4f}")
 - Check GPU utilization if using CUDA
 - Expect: 30 min - 2 hours depending on track and hardware
 
-☐ Baseline model training started
-☐ Training completing without errors
-☐ Loss decreasing over epochs
+☐ Baseline model training started  
+☐ Training completing without errors  
+☐ Loss decreasing over epochs  
 ☐ Validation accuracy reasonable
 
 ---
@@ -782,9 +782,9 @@ Next steps for improvement:
 3. [Idea 3]
 ```
 
-☐ Training curves plotted
-☐ Test set evaluated
-☐ Confusion matrix created
+☐ Training curves plotted  
+☐ Test set evaluated  
+☐ Confusion matrix created  
 ☐ Results documented
 
 ---
@@ -803,21 +803,19 @@ Answer these questions:
 
 5. **Tomorrow's priorities**: What will you try tomorrow to improve performance?
 
-☐ Reflection completed
-
 ---
 
 ## End of Day 22 Checklist
 
-☐ Data pipeline implemented and tested
-☐ DataLoaders working correctly
-☐ Baseline model implemented
-☐ Training script working
-☐ Baseline model trained successfully
-☐ Results analyzed and documented
-☐ Training curves look reasonable
-☐ Test accuracy documented
-☐ Ideas for improvement identified
+☐ Data pipeline implemented and tested  
+☐ DataLoaders working correctly  
+☐ Baseline model implemented  
+☐ Training script working  
+☐ Baseline model trained successfully  
+☐ Results analyzed and documented  
+☐ Training curves look reasonable  
+☐ Test accuracy documented  
+☐ Ideas for improvement identified  
 
 **Expected Results by Track**:
 - **Track 1**: 70-85% accuracy (imbalanced dataset)
@@ -850,5 +848,3 @@ Answer these questions:
 
 **Issue**: Perfect training accuracy but poor validation
 - **Solution**: Overfitting! Add regularization (dropout, weight decay), more data augmentation
-
-☐ Ready for Day 23!

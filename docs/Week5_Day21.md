@@ -109,8 +109,6 @@ Choose ONE track that interests you most. Read through all three before deciding
 
 **Custom project?** You can propose your own if you have a dataset and clear problem definition. Check with instructor first.
 
-☐ I choose Track: _________________
-
 ---
 
 ### Project Planning (90 min)
@@ -139,27 +137,6 @@ SUCCESS CRITERIA:
 - Deliverables: [Working code, trained model, README, results]
 ```
 
-**Example for Track 1**:
-```
-PROJECT: Pneumonia Detection from Chest X-Rays
-
-PROBLEM: Binary classification of chest X-rays as Normal or Pneumonia
-
-WHY IT MATTERS: Early pneumonia detection can save lives; AI can assist 
-radiologists in screening large volumes of X-rays
-
-DATASET: Chest X-Ray Images (Pneumonia) from Kaggle
-- Size: ~5,800 images
-- Classes: NORMAL (1,583), PNEUMONIA (4,273)
-- Features: Grayscale X-ray images
-
-SUCCESS CRITERIA:
-- Primary: >85% accuracy on test set
-- Secondary: >90% recall for pneumonia (minimize false negatives)
-- Deliverables: Trained CNN model, confusion matrix, README with results
-```
-
-☐ Project definition document created
 
 ---
 
@@ -544,9 +521,9 @@ class BaselineLogistic:
 # - Expected result: 50-55% accuracy (random is 50%!)
 ```
 
-☐ Baseline architecture documented
-☐ Training hyperparameters planned
-☐ Expected performance estimated
+☐ Baseline architecture documented  
+☐ Training hyperparameters planned  
+☐ Expected performance estimated  
 
 ---
 
@@ -564,33 +541,21 @@ Answer these questions in your project notes:
 
 5. **Questions**: What do you need to clarify or learn more about?
 
-☐ Reflection completed
-
 ---
 
 ## End of Day 21 Checklist
 
 Before you finish today, verify you have:
 
-☐ Project track chosen
-☐ Project definition document written
+☐ Project track chosen  
+☐ Project definition document written  
 ☐ Technical plan documented  
-☐ Milestone timeline created
-☐ Development environment set up
-☐ Dataset downloaded and verified
-☐ Data exploration notebook with visualizations
-☐ Baseline model architecture defined
-☐ Daily reflection completed
-
-**If you completed everything**: Great! You're well-prepared for Day 22.
-
-**If you're behind**: That's okay! Focus on getting the dataset downloaded and explored. You can finalize the baseline tomorrow morning.
-
-**Need help?**: Post questions on Teams or bring them to Wednesday's check-in.
-
----
-
-**Tomorrow (Day 22)**: You'll implement your data pipeline, train your baseline model, and get initial results!
+☐ Milestone timeline created  
+☐ Development environment set up  
+☐ Dataset downloaded and verified  
+☐ Data exploration notebook with visualizations  
+☐ Baseline model architecture defined  
+☐ Daily reflection completed  
 
 ---
 

@@ -574,13 +574,13 @@ print("="*60)
 
 Congratulations on completing Week 1! You now understand:
 
-✅ NumPy for numerical computing
-✅ Matplotlib for visualization
-✅ Core ML concepts (supervised learning, overfitting, regularization)
-✅ Linear and logistic regression
-✅ Multiple ML algorithms (Decision Trees, Random Forests, SVM, KNN)
-✅ Scikit-learn pipelines and workflows
-✅ End-to-end ML project execution
+- NumPy for numerical computing
+- Matplotlib for visualization
+- Core ML concepts (supervised learning, overfitting, regularization)
+- Linear and logistic regression
+- Multiple ML algorithms (Decision Trees, Random Forests, SVM, KNN)
+- Scikit-learn pipelines and workflows
+- End-to-end ML project execution
 
 **Weekend Activities:**
 

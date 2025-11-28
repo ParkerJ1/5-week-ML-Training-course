@@ -143,24 +143,23 @@ plt.colorbar(im, ax=ax, label='Token Index')
 plt.tight_layout()
 plt.show()
 
-print("\n✓ Exercise 1 complete")
+print("\n Exercise 1 complete")
 ```
 
 #### Exercise 2: Word2Vec from Scratch (70 min)
 
-```python
-print("\n" + "="*70)
-print("EXERCISE 2: WORD2VEC IMPLEMENTATION")
-print("="*70)
 
-print("""
-Word2Vec: Learn word embeddings from context
+**Word2Vec: Learn word embeddings from context - OPTIONAL**  
 Two architectures:
 1. Skip-gram: Predict context from word
 2. CBOW: Predict word from context
 
 We'll implement simple Skip-gram
-""")
+
+```python
+print("\n" + "="*70)
+print("EXERCISE 2: WORD2VEC IMPLEMENTATION")
+print("="*70)
 
 class SkipGram(nn.Module):
     def __init__(self, vocab_size, embedding_dim):
@@ -291,7 +290,7 @@ for word in test_words:
         for similar_word, sim in similar:
             print(f"  {similar_word}: {sim:.4f}")
 
-print("\n✓ Exercise 2 complete")
+print("\n Exercise 2 complete")
 ```
 
 ---
@@ -300,7 +299,10 @@ print("\n✓ Exercise 2 complete")
 
 ### Hands-on Coding - Part 2 (3.5 hours)
 
-#### Exercise 3: Using Pretrained Embeddings (60 min)
+#### Exercise 3: Using Pretrained Embeddings (60 min) - OPTIONAL
+
+**Note:** In practice, download GloVe from https://nlp.stanford.edu/projects/glove/  
+For this exercise, we'll simulate the concept
 
 ```python
 print("\n" + "="*70)
@@ -308,8 +310,7 @@ print("EXERCISE 3: PRETRAINED EMBEDDINGS")
 print("="*70)
 
 # Simulate GloVe embeddings (in practice, download from Stanford)
-print("Note: In practice, download GloVe from https://nlp.stanford.edu/projects/glove/")
-print("For this exercise, we'll simulate the concept\n")
+
 
 # Create text classifier with embeddings
 class EmbeddingClassifier(nn.Module):
@@ -423,13 +424,16 @@ for epoch in range(100):
         acc = (preds == Y_tensor).float().mean()
         print(f"Epoch {epoch+1}: Loss = {loss.item():.4f}, Acc = {acc:.4f}")
 
-print("\n💡 Pretrained embeddings provide better starting point!")
+print("\n Pretrained embeddings provide better starting point!")
 print("   Especially valuable with limited training data")
 
-print("\n✓ Exercise 3 complete")
+print("\n Exercise 3 complete")
 ```
 
 #### Exercise 4: Embedding Space Visualization (45 min)
+
+**NOTE:** This is a visualisation exercise, copy this code!  
+Similar words cluster together in embedding space! This is how models understand semantic relationships
 
 ```python
 print("\n" + "="*70)
@@ -480,13 +484,14 @@ axes[1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("💡 Similar words cluster together in embedding space!")
-print("   This is how models understand semantic relationships")
 
-print("\n✓ Exercise 4 complete")
+
+print("\n Exercise 4 complete")
 ```
 
 #### Mini-Challenge: Text Classification Pipeline (70 min)
+
+**NOTE:** Code all of this yourself, except for the code for visualisation.
 
 ```python
 print("\n" + "="*70)
@@ -642,18 +647,18 @@ for text, pred in zip(test_texts, predictions):
     label = "Positive" if pred == 1 else "Negative"
     print(f"  '{text}' → {label}")
 
-print("\n🎉 Complete text classification pipeline!")
-print("\n✓ Mini-challenge complete")
+print("\n Complete text classification pipeline!")
+print("\n Mini-challenge complete")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review text preprocessing steps
-☐ Understand word embeddings
-☐ Connect embeddings to Transformers
-☐ Write daily reflection
+☐ Review text preprocessing steps  
+☐ Understand word embeddings  
+☐ Connect embeddings to Transformers  
+☐ Write daily reflection  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

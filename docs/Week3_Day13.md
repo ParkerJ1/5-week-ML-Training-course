@@ -44,6 +44,20 @@
 
 #### Exercise 1: VGG Blocks and Architecture (60 min)
 
+**Key VGG insight - Why 3×3 convolutions?**
+
+Two 3×3 convs:
+  - Receptive field: 5×5
+  - Parameters: 2 × (3×3) = 18 per channel
+  - Non-linearities: 2 (ReLU after each)
+
+One 5×5 conv:
+  - Receptive field: 5×5
+  - Parameters: 1 × (5×5) = 25 per channel
+  - Non-linearities: 1
+
+Result: 28% fewer parameters + more non-linearity!
+
 Understand VGG's modular design:
 
 ```python
@@ -82,20 +96,7 @@ def vgg_block(num_convs, in_channels, out_channels):
     layers.append(nn.MaxPool2d(kernel_size=2, stride=2))
     return nn.Sequential(*layers)
 
-# Demonstrate receptive field advantage
-print("\n💡 VGG Insight: Why 3×3 convolutions?")
-print("-" * 60)
-print("Two 3×3 convs:")
-print("  - Receptive field: 5×5")
-print("  - Parameters: 2 × (3×3) = 18 per channel")
-print("  - Non-linearities: 2 (ReLU after each)")
-print()
-print("One 5×5 conv:")
-print("  - Receptive field: 5×5")
-print("  - Parameters: 1 × (5×5) = 25 per channel")
-print("  - Non-linearities: 1")
-print()
-print("Result: 28% fewer parameters + more non-linearity!")
+
 
 class VGG16_MNIST(nn.Module):
     """
@@ -146,7 +147,7 @@ class VGG16_MNIST(nn.Module):
         return x
 
 # Create model
-vgg = VGG16_MNIST()
+vgg = VGG16_MNIST().to(device)
 print("\nVGG-16 Architecture (MNIST version):")
 print(vgg)
 
@@ -227,33 +228,35 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 vgg_accuracy = correct / total
-print(f"\n🎯 VGG-16 Test Accuracy: {vgg_accuracy:.4f}")
+print(f"\nVGG-16 Test Accuracy: {vgg_accuracy:.4f}")
 print(f"Parameters: {vgg_params:,}")
 
-print("\n✓ VGG implementation complete")
+print("\nVGG implementation complete")
 ```
+
+
 
 #### Exercise 2: Understanding Residual Blocks (60 min)
 
-Learn the breakthrough idea of ResNet:
+Breakthrough idea of ResNet:
+
+**The Vanishing Gradient Problem:**
+- Deep networks hard to train (gradients disappear)
+- Adding layers made performance WORSE (degradation problem)
+- Not overfitting - training error also increased!
+
+**ResNet's Solution: Skip Connections:**
+- Instead of learning H(x), learn F(x) = H(x) - x
+- Output: H(x) = F(x) + x
+- If optimal is identity, just learn F(x) = 0 (easy!)
+- Gradients flow directly through skip connections
 
 ```python
 print("\n" + "="*70)
 print("EXERCISE 2: RESIDUAL BLOCKS")
 print("="*70)
 
-print("""
-The Vanishing Gradient Problem:
-- Deep networks hard to train (gradients disappear)
-- Adding layers made performance WORSE (degradation problem)
-- Not overfitting - training error also increased!
 
-ResNet's Solution: Skip Connections
-- Instead of learning H(x), learn F(x) = H(x) - x
-- Output: H(x) = F(x) + x
-- If optimal is identity, just learn F(x) = 0 (easy!)
-- Gradients flow directly through skip connections
-""")
 
 class ResidualBlock(nn.Module):
     """
@@ -359,9 +362,9 @@ print(f"Plain block: {plain_grad.abs().mean().item():.6f}")
 print(f"Residual block: {res_grad.abs().mean().item():.6f}")
 print(f"Ratio: {(res_grad.abs().mean() / plain_grad.abs().mean()).item():.2f}x")
 
-print("\n💡 Skip connections maintain gradient flow!")
+print("\nSkip connections maintain gradient flow!")
 
-print("\n✓ Residual blocks understood")
+print("\nResidual blocks understood")
 ```
 
 ---
@@ -531,9 +534,9 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 resnet_accuracy = correct / total
-print(f"\n🎯 ResNet-18 Test Accuracy: {resnet_accuracy:.4f}")
+print(f"\nResNet-18 Test Accuracy: {resnet_accuracy:.4f}")
 
-print("\n✓ ResNet-18 implementation complete")
+print("\nResNet-18 implementation complete")
 ```
 
 #### Exercise 4: Compare Plain vs Residual Networks (60 min)
@@ -648,7 +651,7 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 plain_accuracy = correct / total
-print(f"\n🎯 PlainNet Test Accuracy: {plain_accuracy:.4f}")
+print(f"\nPlainNet Test Accuracy: {plain_accuracy:.4f}")
 
 # Comparison visualization
 fig, axes = plt.subplots(1, 2, figsize=(14, 5))
@@ -685,16 +688,16 @@ print(f"{'ResNet-18':<15} | {resnet_params:>12,} | {resnet_accuracy:>14.4f} | "
       f"{'+' if resnet_accuracy > plain_accuracy else ''}{(resnet_accuracy - plain_accuracy):.4f}:>12}")
 print("="*80)
 
-print("\n💡 Key Observations:")
-print("- Skip connections improve training stability")
-print("- ResNet often converges faster")
-print("- Performance difference more dramatic on complex datasets")
-print("- Skip connections enable much deeper networks (50, 101, 152 layers)")
-
-print("\n✓ Comparison complete")
 ```
 
-#### Exercise 5: Visualize Gradient Flow (40 min)
+**Key Observations:**
+- Skip connections improve training stability
+- ResNet often converges faster
+- Performance difference more dramatic on complex datasets
+- Skip connections enable much deeper networks (50, 101, 152 layers)
+
+
+#### Exercise 5: Visualize Gradient Flow (40 min) - OPTIONAL
 
 See how skip connections help gradients:
 
@@ -764,27 +767,21 @@ axes[1].legend()
 plt.suptitle('Gradient Flow Comparison', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
-
-print("\n💡 Observations:")
-print("- PlainNet: Gradients get smaller in earlier layers (vanishing gradients)")
-print("- ResNet: More uniform gradient distribution throughout network")
-print("- Skip connections create 'highways' for gradient flow")
-print("- This is why ResNet can go 100+ layers deep")
-
-print("\n✓ Gradient visualization complete")
 ```
+**Observations:**
+- PlainNet: Gradients get smaller in earlier layers (vanishing gradients)
+- ResNet: More uniform gradient distribution throughout network
+- Skip connections create 'highways' for gradient flow
+- This is why ResNet can go 100+ layers deep
 
-#### Mini-Challenge: Design Deep ResNet (50 min)
+
+
+#### Mini-Challenge: Design Deep ResNet (50 min) - OPTIONAL
 
 Apply residual learning principles:
 
-```python
-print("\n" + "="*70)
-print("MINI-CHALLENGE: DEEPER RESNET")
-print("="*70)
 
-print("""
-Your challenge: Design a deeper ResNet variant
+**Your challenge:** Design a deeper ResNet variant
 
 Options to explore:
 1. ResNet-34: [3,4,6,3] blocks in each stage
@@ -794,7 +791,12 @@ Options to explore:
 5. Try different downsampling strategies
 
 Goal: Beat your Day 12 custom CNN!
-""")
+
+
+```python
+print("\n" + "="*70)
+print("MINI-CHALLENGE: DEEPER RESNET")
+print("="*70)
 
 class DeepResNet(nn.Module):
     """Your deeper ResNet design"""
@@ -879,18 +881,18 @@ with torch.no_grad():
         correct += (predicted == labels).sum().item()
 
 deep_accuracy = correct / total
-print(f"\n🎯 Your Deep ResNet Accuracy: {deep_accuracy:.4f}")
+print(f"\n Your Deep ResNet Accuracy: {deep_accuracy:.4f}")
 
-print("\n✓ Deep ResNet challenge complete!")
+print("\n Deep ResNet challenge complete!")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review VGG and ResNet architectures
-☐ Understand skip connections deeply
-☐ Write daily reflection (choose 2-3 prompts below)
+☐ Review VGG and ResNet architectures  
+☐ Understand skip connections deeply  
+☐ Write daily reflection (choose 2-3 prompts below)  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

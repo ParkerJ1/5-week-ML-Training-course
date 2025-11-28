@@ -44,6 +44,25 @@
 
 #### Exercise 1: Understanding GAN Components (45 min)
 
+
+**GAN Architecture:**
+
+**Generator**: Noise → Fake Data
+- Input: Random noise vector z (latent space)
+- Output: Generated sample (e.g., image)
+- Goal: Fool the discriminator
+
+**Discriminator**: Data → Real/Fake Classification
+- Input: Sample (real or fake)
+- Output: Probability it's real
+- Goal: Distinguish real from fake
+
+**Training**: Minimax game
+- Discriminator maximizes: $\log(D(x)) + \log(1 - D(G(z)))$
+- Generator minimizes: $\log(1 - D(G(z)))$ 
+  or equivalently, maximizes $\log(D(G(z)))$
+
+
 ```python
 import torch
 import torch.nn as nn
@@ -56,25 +75,6 @@ import numpy as np
 print("="*70)
 print("EXERCISE 1: GAN COMPONENTS")
 print("="*70)
-
-print("""
-GAN Architecture:
-
-Generator: Noise → Fake Data
-- Input: Random noise vector z (latent space)
-- Output: Generated sample (e.g., image)
-- Goal: Fool the discriminator
-
-Discriminator: Data → Real/Fake Classification
-- Input: Sample (real or fake)
-- Output: Probability it's real
-- Goal: Distinguish real from fake
-
-Training: Minimax game
-- Discriminator maximizes: log(D(x)) + log(1 - D(G(z)))
-- Generator minimizes: log(1 - D(G(z)))
-  (or equivalently, maximizes log(D(G(z))))
-""")
 
 # Simple Generator
 class SimpleGenerator(nn.Module):
@@ -148,8 +148,8 @@ fake_pred = discriminator(fake_data.detach())
 print(f"\nReal data predictions: {real_pred.squeeze().tolist()}")
 print(f"Fake data predictions: {fake_pred.squeeze().tolist()}")
 
-print("\n💡 Generator creates data, Discriminator judges it!")
-print("\n✓ Exercise 1 complete")
+print("\n Generator creates data, Discriminator judges it!")
+print("\n Exercise 1 complete")
 ```
 
 #### Exercise 2: GAN Training Loop (60 min)
@@ -264,7 +264,7 @@ for epoch in range(epochs):
           f"D_loss: {avg_d_loss:.4f} G_loss: {avg_g_loss:.4f} "
           f"D(x): {avg_real_score:.4f} D(G(z)): {avg_fake_score:.4f}")
 
-print("\n✓ Exercise 2 complete")
+print("\n Exercise 2 complete")
 ```
 
 ---
@@ -274,6 +274,14 @@ print("\n✓ Exercise 2 complete")
 ### Hands-on Coding - Part 2 (3.5 hours)
 
 #### Exercise 3: Visualize Generated Images (40 min)
+
+
+**Observations:**
+- $D(x)$ should stay around 0.5-0.7 (recognizes real as real)
+- $D(G(z))$ should approach 0.5 (fakes become realistic)
+- If gap is too large, discriminator is winning
+- If gap is too small, generator might be winning (mode collapse)
+
 
 ```python
 print("\n" + "="*70)
@@ -336,30 +344,23 @@ axes[2].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Observations:")
-print("- D(x) should stay around 0.5-0.7 (recognizes real as real)")
-print("- D(G(z)) should approach 0.5 (fakes become realistic)")
-print("- If gap is too large, discriminator is winning")
-print("- If gap is too small, generator might be winning (mode collapse)")
-
-print("\n✓ Exercise 3 complete")
 ```
 
 #### Exercise 4: DCGAN Implementation (80 min)
 
-```python
-print("\n" + "="*70)
-print("EXERCISE 4: DEEP CONVOLUTIONAL GAN (DCGAN)")
-print("="*70)
 
-print("""
-DCGAN Guidelines (from paper):
+**DCGAN Guidelines** (from paper):
 1. Replace pooling with strided convolutions (D) and fractional-strided convolutions (G)
 2. Use BatchNorm in both G and D
 3. Remove fully connected hidden layers
 4. Use ReLU in G (except output uses Tanh)
 5. Use LeakyReLU in D
-""")
+
+
+```python
+print("\n" + "="*70)
+print("EXERCISE 4: DEEP CONVOLUTIONAL GAN (DCGAN)")
+print("="*70)
 
 class DCGANGenerator(nn.Module):
     def __init__(self, latent_dim, channels=1):
@@ -494,11 +495,22 @@ plt.suptitle(f'DCGAN Generated Digits (After {epochs} Epochs)',
 plt.tight_layout()
 plt.show()
 
-print("\n💡 DCGAN produces sharper images than simple GAN!")
-print("\n✓ Exercise 4 complete")
+print("\n DCGAN produces sharper images than simple GAN!")
+print("\n Exercise 4 complete")
 ```
 
 #### Mini-Challenge: GAN Evaluation & Mode Collapse (50 min)
+
+**Key GAN Challenges**
+1. Mode Collapse: Generator produces limited variety
+2. Training Instability: Losses oscillate
+3. Evaluation: Hard to quantify quality objectively  
+
+**Solutions:**
+- Use proven architectures (DCGAN)
+- Careful hyperparameter tuning
+- Label smoothing, noise injection
+- Wasserstein GAN loss (more stable)
 
 ```python
 print("\n" + "="*70)
@@ -576,27 +588,17 @@ plt.suptitle('Generated Digit Diversity', fontsize=14, fontweight='bold')
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key GAN Challenges:")
-print("1. Mode Collapse: Generator produces limited variety")
-print("2. Training Instability: Losses oscillate")
-print("3. Evaluation: Hard to quantify quality objectively")
-print("\n💡 Solutions:")
-print("- Use proven architectures (DCGAN)")
-print("- Careful hyperparameter tuning")
-print("- Label smoothing, noise injection")
-print("- Wasserstein GAN loss (more stable)")
-
-print("\n✓ Mini-challenge complete")
+print("\n Mini-challenge complete")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review GAN architecture and training
-☐ Understand adversarial dynamics
-☐ Note common failure modes
-☐ Write daily reflection
+☐ Review GAN architecture and training  
+☐ Understand adversarial dynamics  
+☐ Note common failure modes  
+☐ Write daily reflection  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

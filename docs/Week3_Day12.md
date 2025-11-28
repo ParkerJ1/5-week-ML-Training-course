@@ -499,18 +499,18 @@ ax.set_title('AlexNet Architecture (Simplified)', fontsize=14, fontweight='bold'
 plt.tight_layout()
 plt.show()
 
-print("\nKey Observations:")
-print("- LeNet (1998): Small, efficient, tanh activation")
-print("- AlexNet (2012): Deeper, ReLU, dropout, more parameters")
-print("- Both work well on MNIST (too easy for modern CNNs)")
-print("- Real power shows on complex datasets (ImageNet)")
 
-print("\nComparison complete")
 ```
+**Key Observations**
+- LeNet (1998): Small, efficient, tanh activation
+- AlexNet (2012): Deeper, ReLU, dropout, more parameters
+- Both work well on MNIST (too easy for modern CNNs)
+- Real power shows on complex datasets (ImageNet)
+
 
 #### Exercise 4: Historical Context Analysis (40 min)
 
-Understand the evolution and impact:
+Understand the evolution and impact. *Note: this code is just an explanation of the historical development of these models. Focus on the output of this code, not the code itself*
 
 ```python
 print("\n" + "="*70)
@@ -625,7 +625,7 @@ print("\nHistorical context understood")
 
 #### Exercise 5: Feature Visualization Comparison (50 min)
 
-Compare what LeNet and AlexNet learn:
+Compare what LeNet and AlexNet learn. *Focus on the output of this code.*
 
 ```python
 print("\n" + "="*70)
@@ -728,14 +728,13 @@ plt.suptitle(f'AlexNet Conv1 Feature Maps (first 16 of 64, Label: {labels[0].ite
 plt.tight_layout()
 plt.show()
 
-print("\nObservations:")
-print("- LeNet: 6 filters, captures basic edges and patterns")
-print("- AlexNet: 64 filters, more diverse feature detection")
-print("- More filters → more capacity to learn complex features")
-print("- Both learn hierarchical representations")
-
-print("\nFeature visualization complete")
 ```
+
+**Observations**
+- LeNet: 6 filters, captures basic edges and patterns
+- AlexNet: 64 filters, more diverse feature detection
+- More filters → more capacity to learn complex features
+- Both learn hierarchical representations
 
 #### Mini-Challenge: Design Your Own Architecture (60 min)
 
@@ -887,9 +886,9 @@ print("\nCustom architecture complete!")
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review LeNet and AlexNet architectures
-☐ Understand historical significance
-☐ Write daily reflection (choose 2-3 prompts below)
+☐ Review LeNet and AlexNet architectures  
+☐ Understand historical significance  
+☐ Write daily reflection (choose 2-3 prompts below)  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

@@ -154,8 +154,8 @@ axes[1].grid(True, alpha=0.3)
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key Insight: RNN maintains hidden state that evolves over time!")
-print("\n✓ Exercise 1 complete")
+print("\n Key Insight: RNN maintains hidden state that evolves over time!")
+print("\n Exercise 1 complete")
 ```
 
 #### Exercise 2: Character-Level Prediction (60 min)
@@ -274,10 +274,10 @@ with torch.no_grad():
         input_char = ix_to_char[X_text[i]]
         true_char = ix_to_char[Y_text[i]]
         pred_char = ix_to_char[predictions[i]]
-        correct = "✓" if pred_char == true_char else "✗"
+        correct = "" if pred_char == true_char else ""
         print(f"  '{input_char}' → '{pred_char}' (true: '{true_char}') {correct}")
 
-print("\n✓ Exercise 2 complete")
+print("\n Exercise 2 complete")
 ```
 
 ---
@@ -288,31 +288,39 @@ print("\n✓ Exercise 2 complete")
 
 #### Exercise 3: LSTM Implementation (70 min)
 
+
+
+
+**LSTM Gates:**
+1. Forget gate: $$f_t = \sigma(W_f \cdot [h_{t-1}, x_t] + b_f)$$
+   - Decides what to remove from cell state
+   
+2. Input gate: $$i_t = σ(W_i \cdot [h_{t-1}, x_t] + b_i)$$
+   - Decides what new information to add
+   
+3. Cell gate: $$C̃_t = tanh(W_C \cdot [h_{t-1}, x_t] + b_C)$$
+   - Creates new candidate cell state
+   
+4. Output gate: $$o_t = σ(W_o \cdot [h_{t-1}, x_t] + b_o)$$
+   - Decides what to output
+
+Cell state update:
+$$C_t = f_t \odot C_{t-1} + i_t \odot C̃_t$$
+
+Hidden state:
+$$h_t = o_t \odot tanh(C_t)$$
+
+**Key Insights:**
+- Forget gate controls what to remove from memory
+- Input gate controls what new info to add
+- Cell state is long-term memory
+- Hidden state is output at each step
+
+
 ```python
 print("\n" + "="*70)
 print("EXERCISE 3: LSTM IMPLEMENTATION")
 print("="*70)
-
-print("""
-LSTM Gates:
-1. Forget gate: f_t = σ(W_f @ [h_{t-1}, x_t] + b_f)
-   - Decides what to remove from cell state
-   
-2. Input gate: i_t = σ(W_i @ [h_{t-1}, x_t] + b_i)
-   - Decides what new information to add
-   
-3. Cell gate: C̃_t = tanh(W_C @ [h_{t-1}, x_t] + b_C)
-   - Creates new candidate cell state
-   
-4. Output gate: o_t = σ(W_o @ [h_{t-1}, x_t] + b_o)
-   - Decides what to output
-
-Cell state update:
-C_t = f_t * C_{t-1} + i_t * C̃_t
-
-Hidden state:
-h_t = o_t * tanh(C_t)
-""")
 
 class SimpleLSTM:
     def __init__(self, input_size, hidden_size):
@@ -445,16 +453,11 @@ plt.colorbar(im, ax=axes[1])
 plt.tight_layout()
 plt.show()
 
-print("\n💡 Key Insights:")
-print("- Forget gate controls what to remove from memory")
-print("- Input gate controls what new info to add")
-print("- Cell state is long-term memory")
-print("- Hidden state is output at each step")
-
-print("\n✓ Exercise 3 complete")
+print("\n Exercise 3 complete")
 ```
 
 #### Exercise 4: Sequence Prediction with PyTorch LSTM (60 min)
+*NOTE: This exercise is mostly for visualisation - feel free to copy this code entirely*
 
 ```python
 print("\n" + "="*70)
@@ -606,7 +609,7 @@ axes[1, 1].grid(True, alpha=0.3, axis='y')
 plt.tight_layout()
 plt.show()
 
-print("\n✓ Exercise 4 complete")
+print("\n Exercise 4 complete")
 ```
 
 #### Mini-Challenge: Many-to-One Sentiment (50 min)
@@ -744,16 +747,16 @@ with torch.no_grad():
         label = "Positive" if pred > 0.5 else "Negative"
         print(f"  '{sent}' → {label} (confidence: {pred:.4f})")
 
-print("\n✓ Mini-challenge complete!")
+print("\n Mini-challenge complete!")
 ```
 
 ---
 
 ## Reflection & Consolidation (30 min)
 
-☐ Review RNN and LSTM architectures
-☐ Understand vanishing gradients problem
-☐ Write daily reflection
+☐ Review RNN and LSTM architectures  
+☐ Understand vanishing gradients problem  
+☐ Write daily reflection  
 
 ### Daily Reflection Prompts (Choose 2-3):
 

@@ -21,7 +21,7 @@ Brief, compelling description of what your project does.
 
 ![Results Visualization](results/figures/final_results.png)
 
-## 📋 Overview
+## Overview
 
 **Problem**: [What problem are you solving?]
 
@@ -31,7 +31,7 @@ Brief, compelling description of what your project does.
 - **Test Accuracy**: XX.X%
 - **[Key Metric]**: XX.X%
 
-## 🎯 Motivation
+## Motivation
 
 Why is this problem interesting/important? (2-3 paragraphs)
 
@@ -44,7 +44,7 @@ Why is this problem interesting/important? (2-3 paragraphs)
 
 [Optional: Show sample images/text]
 
-## 🏗️ Architecture
+## Architecture
 
 Brief description of your model architecture.
 
@@ -74,7 +74,7 @@ Brief description of your model architecture.
 ### What Didn't Work:
 - [Technique]: [Why it failed]
 
-## 📈 Results
+## Results
 
 ### Final Performance:
 \```
@@ -95,7 +95,7 @@ F1-Score: XX.X%
 - [Link to training curves]
 - [Link to sample predictions]
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 \```bash
@@ -126,20 +126,20 @@ python src/train.py --epochs 15 --lr 0.001 --batch-size 32
 python src/evaluate.py --model models/final_model.pth
 \```
 
-## 💡 Key Learnings
+## Key Learnings
 
 1. [Important insight 1]
 2. [Important insight 2]
 3. [Important insight 3]
 
-## 🔮 Future Work
+## Future Work
 
 - [ ] Try transformer-based models
 - [ ] Experiment with semi-supervised learning
 - [ ] Deploy as web application
 - [ ] Collect more training data
 
-## 📚 References
+## References
 
 - [Dataset source]
 - [Key papers or tutorials used]
@@ -151,13 +151,11 @@ python src/evaluate.py --model models/final_model.pth
 [Your LinkedIn/GitHub]  
 Project for: 5-Week ML Training Program
 
-## 📄 License
+## License
 
 [Choose license: MIT, Apache 2.0, etc.]
 
----
 
-Made with ❤️ using PyTorch
 ```
 
 #### README Writing Tips:
@@ -168,9 +166,9 @@ Made with ❤️ using PyTorch
 4. **Make it runnable**: Clear setup instructions
 5. **Tell a story**: What did you learn? What would you do differently?
 
-☐ README.md written
-☐ All sections complete
-☐ Links and images work
+☐ README.md written  
+☐ All sections complete  
+☐ Links and images work  
 ☐ Professional and clear
 
 ---
@@ -246,8 +244,8 @@ pillow==10.0.0  # If using images
 seaborn==0.12.2  # For visualizations
 ```
 
-☐ All files have module docstrings
-☐ Config file created
+☐ All files have module docstrings  
+☐ Config file created  
 ☐ Requirements.txt complete
 
 ---
@@ -340,8 +338,8 @@ Given more time/resources:
 - [Improvement 3]
 ```
 
-☐ Results document written
-☐ All metrics included
+☐ Results document written  
+☐ All metrics included  
 ☐ Analysis thoughtful and honest
 
 ---
@@ -349,92 +347,6 @@ Given more time/resources:
 ## Afternoon Session (4 hours)
 
 ### Presentation Preparation (2 hours)
-
-Create a 10-minute presentation (10-15 slides).
-
-#### Suggested Slide Structure:
-
-**Slide 1: Title**
-- Project name
-- Your name
-- Date
-
-**Slide 2: Problem Statement**
-- What problem are you solving?
-- Why does it matter?
-- Real-world application
-
-**Slide 3: Dataset**
-- Source and size
-- Sample visualizations
-- Class distribution
-- Key characteristics
-
-**Slide 4: Approach**
-- High-level methodology
-- Model architecture choice
-- Key techniques used
-
-**Slide 5: Baseline Results**
-- Simple model approach
-- Initial performance
-- What it taught you
-
-**Slide 6: Model Evolution**
-- Improvements tried
-- What worked / didn't work
-- Progressive performance gains
-
-**Slide 7: Final Architecture**
-- Final model details
-- Key innovations
-- Parameter count
-
-**Slide 8: Results Overview**
-- Main metrics (BIG numbers)
-- Comparison with baseline
-- Training curves
-
-**Slide 9: Detailed Analysis**
-- Confusion matrix
-- Per-class performance
-- Sample predictions
-
-**Slide 10: Error Analysis**
-- Where model fails
-- Why it fails
-- Examples
-
-**Slide 11: Key Learnings**
-- Technical learnings
-- Process learnings
-- What you'd do differently
-
-**Slide 12: Future Work**
-- Potential improvements
-- Deployment considerations
-- Next steps
-
-**Slide 13: Demo (Optional)**
-- Live prediction
-- Show model in action
-
-**Slide 14: Thank You**
-- Questions?
-- GitHub link
-- Contact info
-
-#### Presentation Tips:
-
-1. **Time yourself**: Practice to fit in 10 minutes
-2. **Tell a story**: Problem → Solution → Results → Insights
-3. **Show, don't tell**: Visualizations > text
-4. **Be honest**: Talk about failures too
-5. **Anticipate questions**: Why this dataset? Why this model?
-
-☐ Presentation slides created
-☐ Practiced delivery
-☐ Timing checked
 
 ---
 
@@ -462,8 +374,8 @@ python src/evaluate.py --model models/final_model.pth
 # Success? ✓
 ```
 
-☐ End-to-end workflow tested
-☐ All scripts run without errors
+☐ End-to-end workflow tested  
+☐ All scripts run without errors  
 ☐ Documentation accurate
 
 ---
@@ -474,12 +386,12 @@ Prepare final deliverables:
 
 #### Checklist:
 
-☐ Code is clean and documented
-☐ README.md is complete and professional
-☐ requirements.txt is accurate
-☐ Final model is saved
-☐ Results are documented with figures
-☐ Presentation is ready
+☐ Code is clean and documented  
+☐ README.md is complete and professional  
+☐ requirements.txt is accurate  
+☐ Final model is saved  
+☐ Results are documented with figures  
+☐ Presentation is ready  
 ☐ (Optional) GitHub repo created
 
 #### GitHub (if applicable):
@@ -506,29 +418,7 @@ __pycache__/
 
 ---
 
-### Presentation (1 hour)
-
-**Final check-in: Present your project!**
-
-During presentation:
-1. Start with problem/motivation
-2. Walk through approach
-3. Show results with enthusiasm
-4. Discuss learnings honestly
-5. Take questions gracefully
-
-After presentation:
-- Get feedback
-- Note suggestions for improvement
-- Celebrate your work!
-
-☐ Presentation delivered
-☐ Feedback received
-☐ Improvements noted
-
----
-
-## 🎉 Celebration & Reflection (30 min)
+## Celebration & Reflection (30 min)
 
 Congratulations! You've completed a full ML project!
 
@@ -546,23 +436,21 @@ Congratulations! You've completed a full ML project!
 
 6. **Next project**: What would you like to build next?
 
-☐ Final reflection completed
-
 ---
 
-## End of Week 5 - Project Complete! 🎊
+## End of Week 5 - Project Complete!
 
 ### What You've Accomplished:
 
-✅ **Day 21**: Planned comprehensive ML project
-✅ **Day 22**: Built data pipeline and baseline model
-✅ **Day 23**: Iterated and improved model
-✅ **Day 24**: Tested thoroughly and refined
-✅ **Day 25**: Documented professionally and presented
+- **Day 21**: Planned comprehensive ML project
+- **Day 22**: Built data pipeline and baseline model
+- **Day 23**: Iterated and improved model
+- **Day 24**: Tested thoroughly and refined
+- **Day 25**: Documented professionally and presented
 
 ### Your Portfolio Now Includes:
 
-📂 Complete ML project with:
+Complete ML project with:
 - Working code
 - Trained models
 - Comprehensive documentation
@@ -571,32 +459,18 @@ Congratulations! You've completed a full ML project!
 
 ### Skills Demonstrated:
 
-✅ Problem formulation
-✅ Data preprocessing and augmentation
-✅ Model architecture design
-✅ Training and optimization
-✅ Hyperparameter tuning
-✅ Error analysis
-✅ Professional documentation
-✅ Technical presentation
+- Problem formulation
+- Data preprocessing and augmentation
+- Model architecture design
+- Training and optimization
+- Hyperparameter tuning
+- Error analysis
+- Professional documentation
+- Technical presentation
 
 ---
 
-## Next Steps
-
-### Immediate:
-1. Share project on LinkedIn
-2. Add to GitHub portfolio
-3. Get feedback from peers
-4. Update resume with project
-
-### Short-term:
-1. Iterate based on feedback
-2. Try suggested improvements
-3. Write blog post about learnings
-4. Start thinking about next project
-
-### Optional Week 6:
+## Optional Week 6:
 - Continue with Week 6 (Production ML) to learn deployment
 - Deploy this project as an API
 - Add monitoring and logging
@@ -604,17 +478,17 @@ Congratulations! You've completed a full ML project!
 
 ---
 
-## 🌟 You Did It!
+## You Did It!
 
 You've gone from choosing a dataset to having a complete, documented, presentation-ready ML project. This is a significant achievement!
 
 Remember:
-- Perfect is the enemy of done ✓
-- Real projects teach more than tutorials ✓
-- Your first project won't be your last ✓
-- The ML community is here to help ✓
+- Perfect is the enemy of done
+- Real projects teach more than tutorials
+- Your first project won't be your last
+- The ML community is here to help
 
-**Congratulations on completing Week 5!** 🎉🎊🚀
+**Congratulations on completing Week 5!** 
 
 Whether you continue to Week 6 or take what you've learned into new projects, you now have the skills and confidence to build real ML systems.
 
@@ -622,4 +496,4 @@ Keep learning, keep building, and most importantly - keep sharing what you creat
 
 ---
 
-**See you in Week 6 (optional) or in your next ML adventure!** 🌈
+**See you in Week 6 (optional) or in your next ML adventure!** 

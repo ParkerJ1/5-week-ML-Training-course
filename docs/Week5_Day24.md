@@ -71,8 +71,8 @@ def comprehensive_evaluation(model, test_loader, device, class_names):
 - **Track 2**: Check F1-score (balanced precision/recall)
 - **Track 3**: Check precision (avoid false buy signals)
 
-☐ Comprehensive metrics calculated
-☐ Per-class performance analyzed
+☐ Comprehensive metrics calculated  
+☐ Per-class performance analyzed  
 ☐ Confusion matrix examined
 
 ---
@@ -133,8 +133,8 @@ def analyze_errors(model, test_loader, device, num_errors=20):
 - Around major news events?
 - Trend changes?
 
-☐ Errors collected and analyzed
-☐ Patterns identified
+☐ Errors collected and analyzed  
+☐ Patterns identified  
 ☐ Examples visualized
 
 ---
@@ -176,8 +176,8 @@ high_conf = probs >= 0.8
 - Market crashes
 - Low volume days
 
-☐ Edge cases tested
-☐ Model behavior documented
+☐ Edge cases tested  
+☐ Model behavior documented  
 ☐ Failure modes identified
 
 ---
@@ -222,8 +222,8 @@ Add rules based on domain knowledge:
 - **Track 2**: Boost sentiment for words like "amazing", "terrible"
 - **Track 3**: Don't trade on low volume days
 
-☐ Optimization attempted
-☐ Final model performance measured
+☐ Optimization attempted  
+☐ Final model performance measured  
 ☐ Improvement documented
 
 ---
@@ -249,8 +249,8 @@ final_test_accuracy = evaluate(final_model, test_loader)
 torch.save(final_model.state_dict(), 'models/final_model.pth')
 ```
 
-☐ Final model trained
-☐ Test set evaluated (ONCE only!)
+☐ Final model trained  
+☐ Test set evaluated (ONCE only!)  
 ☐ Final model saved
 
 ---
@@ -302,8 +302,8 @@ plt.savefig('results/figures/final_results.png', dpi=300)
 - Per-class performance bar chart
 - Sample predictions (correct and incorrect)
 
-☐ All visualizations created
-☐ High-quality figures saved
+☐ All visualizations created  
+☐ High-quality figures saved  
 ☐ Results presentation-ready
 
 ---
@@ -374,9 +374,9 @@ for param in list(model.parameters())[:-10]:
 model.fc = nn.Linear(model.fc.in_features, 2)
 ```
 
-☐ Code organized
-☐ Docstrings added
-☐ Comments clear and helpful
+☐ Code organized  
+☐ Docstrings added  
+☐ Comments clear and helpful  
 ☐ Dead code removed
 
 ---
@@ -392,8 +392,6 @@ model.fc = nn.Linear(model.fc.in_features, 2)
 4. **Model limitations**: What does your model still struggle with?
 
 5. **Real-world readiness**: Could this model be used in practice? What would be needed?
-
-☐ Reflection completed
 
 ---
 

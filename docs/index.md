@@ -92,7 +92,7 @@ This comprehensive training program covers the fundamentals of machine learning 
 
 ---
 
-## Week 6: Production Machine Learning (OPTIONAL)
+## Week 6: Production Machine Learning (OPTIONAL) (COMING SOON)
 
 **[📋 Week 6 Overview](Week6_Overview.md)**
 
@@ -132,6 +132,24 @@ This comprehensive training program covers the fundamentals of machine learning 
 4. **Complete Exercises** - Hands-on coding is essential for learning
 5. **Daily Reflection** - Document your learning and questions
 6. **Check-ins** - Monday, Wednesday, Friday with instructor (Weeks 1-4)
+
+### Coding vs Copying
+There is a lot of coding in these exercises. There is value in retyping code yourself - it will help solidify the concepts being impelmented. Once you feel comfortable with a certain part of the code, feel free to copy it instead of retyping it.  
+
+Focus on the code that implements:
+- the datasets and dataloaders, 
+- the models
+- the training and testing loops  
+
+Copy the code that implements:
+- visualisation
+- in-code comparisons designed to produce commentary once executed
+
+***CAREFUL:*** Some exercise require the code from previous exercises in the day
+
+### GenAI assistance
+Feel free to use a generative AI platform (e.g. ChatGPT) as a tutor - ie paste a code snippet and ask it to explain what it does.
+
 
 ### Resources Needed
 
