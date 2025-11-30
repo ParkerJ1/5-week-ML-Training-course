@@ -24,6 +24,7 @@ Week 6 is an optional extension for students who want to learn production ML dep
 ## Prerequisites
 
 This is an **advanced optional week**. You should have:
+
 - Completed Weeks 1-5 successfully
 - Working ML project from Week 5
 - Strong Python skills
@@ -33,6 +34,7 @@ This is an **advanced optional week**. You should have:
 ## Who Should Take This Week
 
 This week is ideal if you:
+
 - Want to become an ML Engineer (not just data scientist)
 - Plan to deploy models in production
 - Are interested in MLOps and DevOps
@@ -42,6 +44,7 @@ This week is ideal if you:
 ## Who Can Skip This Week
 
 You can skip this week if you:
+
 - Are focused purely on research/academia
 - Prefer exploratory data science roles
 - Want to move on to other ML topics
@@ -50,6 +53,7 @@ You can skip this week if you:
 ## Success Criteria
 
 By the end of Week 6, you should have:
+
 - Optimized ML model (4x smaller, faster inference)
 - Working REST API serving predictions
 - Dockerized application
